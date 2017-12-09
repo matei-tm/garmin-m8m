@@ -17,6 +17,15 @@
             <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
         </settingConfig>
     </setting>
+    
+    <setting propertyKey="@Properties.LogoText" title="@Strings.LogoTextTitle">
+        <settingConfig type="list">
+            <listEntry value="1">@Strings.M1</listEntry>
+            <listEntry value="2">@Strings.M2</listEntry>
+            <listEntry value="3">@Strings.M3</listEntry>
+        </settingConfig>
+    </setting>
+    
 
     <setting propertyKey="@Properties.UseMilitaryFormat" title="@Strings.MilitaryFormatTitle">
         <settingConfig type="boolean" />
