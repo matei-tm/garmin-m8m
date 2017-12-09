@@ -70,7 +70,6 @@ class m8mView extends Ui.WatchFace {
     }
     
     function showDate() {
-    // Get the current time and format it correctly
 		var info = Gregorian.info(Time.now(), Time.FORMAT_LONG);
         var dateStr = Lang.format("$1$ $2$ $3$", [info.day_of_week, info.month, info.day]);
 
@@ -83,13 +82,8 @@ class m8mView extends Ui.WatchFace {
 	function showLogoLabel() {
         var viewLogoLabel = View.findDrawableById("LogoLabel");
         viewLogoLabel.setColor(App.getApp().getProperty("ForegroundColor"));
-        switch (App.getApp().getProperty("LogoText"))
-        {
-        	case 1: viewLogoLabel.setText(Rez.Strings.M1); break;
-        	case 2: viewLogoLabel.setText(Rez.Strings.M2); break;
-        	case 3: viewLogoLabel.setText(Rez.Strings.M3); break;
-        }
-	}
+        viewLogoLabel.setText(App.getApp().getProperty("LogoString"));
+ 	}
 	
 	function showTimeLabel() {
 	    // Get the current time and format it correctly

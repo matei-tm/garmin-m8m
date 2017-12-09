@@ -1,0 +1,4 @@
+<drawable-list id="OwlEyes" background="Gfx.COLOR_TRANSPARENT">
+    <shape type="circle" x="30" y="40" radius="4" color="Gfx.COLOR_BLACK" />
+    <shape type="circle" x="55" y="40" radius="4" color="Gfx.COLOR_BLACK" />
+</drawable-list>

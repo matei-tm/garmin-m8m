@@ -1,9 +1,12 @@
 <layout id="WatchFace">
     <drawable class="Background" />
-    <bitmap id="LogoImage" x="5" y="5" filename="../images/owl-med.png" />
+    <bitmap id="LogoImage" x="5" y="5" filename="../images/owl-msm.png" />
     <label id="TimeLabel" x="center" y="120" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />    
     <label id="LogoLabel" x="120" y="5" font="Gfx.FONT_LARGE" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
     <label id="BatteryLabel" x="120" y="30" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
     <label id="DateLabel" x="center" y="180" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
-   	<label id="StepsLabel" x="110" y="110" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_RED" />
+   	<label id="StepsLabel" x="110" y="104" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_RED" />
+   	<drawable id="OwlEyes"/>
+   	<drawable id="ActivityBar"/>
+   	<bitmap id="LogoImageClaws" x="5" y="5" filename="../images/owl-msm-claws.png" />
 </layout>

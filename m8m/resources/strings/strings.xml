@@ -5,7 +5,6 @@
     <string id="BackgroundColorTitle">Background Color</string>
     <string id="ForegroundColorTitle">Foreground Color</string>
     <string id="MilitaryFormatTitle">Military Format for 24 Hour Time</string>
-    <string id="LogoTextTitle">Logo text</string>
 
     <string id="ColorBlack">Black</string>
     <string id="ColorDarkGray">Dark Gray</string>
@@ -14,8 +13,6 @@
     <string id="ColorBlue">Blue</string>
     <string id="ColorRed">Red</string>
     
-    <string id="M1">msm</string>
-    <string id="M2">rem</string>
-    <string id="M3">mtm</string>
+    <string id="LogoStringTitle">Logo text</string>
 
 </strings>
