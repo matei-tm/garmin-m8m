@@ -26,6 +26,7 @@ class m8mView extends Ui.WatchFace {
     
 		showTimeLabel();
 		showLogoLabel();
+		showBattery(dc);
         
 
         // Call the parent onUpdate function to redraw the layout
@@ -44,6 +45,21 @@ class m8mView extends Ui.WatchFace {
 
     // Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
+    }
+    
+    function showSteps() {
+    }
+    
+    function showBattery(dc) {
+		var viewBattery = View.findDrawableById("BatteryLabel");
+        viewBattery.setColor(App.getApp().getProperty("ForegroundColor"));
+    
+    	var dataString = (System.getSystemStats().battery + 0.5).toNumber().toString() + "%";
+
+        viewBattery.setText(dataString); 
+    }
+    
+    function showDate() {
     }
 
 	function showLogoLabel() {
