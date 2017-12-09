@@ -5,9 +5,9 @@ using Toybox.Lang as Lang;
 using Toybox.Application as App;
 
 class m8mView extends Ui.WatchFace {
-
+	
     function initialize() {
-        WatchFace.initialize();
+        WatchFace.initialize();       
     }
 
     // Load your resources here
@@ -23,6 +23,7 @@ class m8mView extends Ui.WatchFace {
 
     // Update the view
     function onUpdate(dc) {
+    
         // Get the current time and format it correctly
         var timeFormat = "$1$:$2$";
         var clockTime = Sys.getClockTime();
@@ -43,6 +44,11 @@ class m8mView extends Ui.WatchFace {
         var view = View.findDrawableById("TimeLabel");
         view.setColor(App.getApp().getProperty("ForegroundColor"));
         view.setText(timeString);
+        
+        // Update the view
+        var viewLogoLabel = View.findDrawableById("LogoLabel");
+        viewLogoLabel.setText("msm");
+        
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
