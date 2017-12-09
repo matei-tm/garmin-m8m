@@ -3,6 +3,8 @@ using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
 using Toybox.Lang as Lang;
 using Toybox.Application as App;
+using Toybox.Time.Gregorian;
+using Toybox.ActivityMonitor as Act;
 
 class m8mView extends Ui.WatchFace {
 	
@@ -27,7 +29,8 @@ class m8mView extends Ui.WatchFace {
 		showTimeLabel();
 		showLogoLabel();
 		showBattery(dc);
-        
+        showDate();
+        showSteps();
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
@@ -48,6 +51,13 @@ class m8mView extends Ui.WatchFace {
     }
     
     function showSteps() {
+    	var view = View.findDrawableById("StepsLabel");
+        view.setColor(App.getApp().getProperty("ForegroundColor"));
+    
+    	var activityInfo = Act.getInfo();
+    	var dataString = activityInfo.steps.toString();
+
+        view.setText(dataString); 
     }
     
     function showBattery(dc) {
@@ -60,6 +70,14 @@ class m8mView extends Ui.WatchFace {
     }
     
     function showDate() {
+    // Get the current time and format it correctly
+		var info = Gregorian.info(Time.now(), Time.FORMAT_LONG);
+        var dateStr = Lang.format("$1$ $2$ $3$", [info.day_of_week, info.month, info.day]);
+
+        // Update the view
+        var view = View.findDrawableById("DateLabel");
+        view.setColor(App.getApp().getProperty("ForegroundColor"));
+        view.setText(dateStr);   
     }
 
 	function showLogoLabel() {
@@ -74,7 +92,7 @@ class m8mView extends Ui.WatchFace {
 	}
 	
 	function showTimeLabel() {
-	        // Get the current time and format it correctly
+	    // Get the current time and format it correctly
         var timeFormat = "$1$:$2$";
         var clockTime = Sys.getClockTime();
         var hours = clockTime.hour;
