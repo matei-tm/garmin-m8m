@@ -71,7 +71,7 @@ class m8mView extends Ui.WatchFace {
     }
 
 	function showLogoLabel() {
-		logoString = App.getApp().getProperty("LogoString");
+		var logoString = App.getApp().getProperty("LogoString");
 		setForegroundColorAndContentOnDrawable("LogoLabel", logoString);
  	}
 	

@@ -1,0 +1,3 @@
+<drawable-list id="BluetoothBar" foreground="Gfx.COLOR_RED" background="Gfx.COLOR_TRANSPARENT">
+    <shape type="ellipse" x="43" y="73" a="3" b="6" />
+</drawable-list>
