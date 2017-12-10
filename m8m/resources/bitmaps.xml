@@ -1,4 +1,4 @@
 <resources>
     <bitmap id="LauncherIcon" filename="images/icon.png" />
-    <bitmap id="owl" filename="images/owl.png" ></bitmap>
+    <bitmap id="owl" filename="images/owl-msm.png" ></bitmap>
 </resources>
