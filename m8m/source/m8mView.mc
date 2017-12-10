@@ -50,39 +50,29 @@ class m8mView extends Ui.WatchFace {
     function onEnterSleep() {
     }
     
-    function showSteps() {
-    	var view = View.findDrawableById("StepsLabel");
-        view.setColor(App.getApp().getProperty("ForegroundColor"));
-    
+    function showSteps() {   
     	var activityInfo = Act.getInfo();
     	var dataString = activityInfo.steps.toString();
 
-        view.setText(dataString); 
+    	setForegroundColorAndContentOnDrawable("StepsLabel", dataString);
     }
     
     function showBattery(dc) {
-		var viewBattery = View.findDrawableById("BatteryLabel");
-        viewBattery.setColor(App.getApp().getProperty("ForegroundColor"));
-    
     	var dataString = (System.getSystemStats().battery + 0.5).toNumber().toString() + "%";
-
-        viewBattery.setText(dataString); 
+		setForegroundColorAndContentOnDrawable("BatteryLabel", dataString);
     }
     
     function showDate() {
 		var info = Gregorian.info(Time.now(), Time.FORMAT_LONG);
-        var dateStr = Lang.format("$1$ $2$ $3$", [info.day_of_week, info.month, info.day]);
+        var dateString = Lang.format("$1$ $2$ $3$", [info.day_of_week, info.month, info.day]);
 
         // Update the view
-        var view = View.findDrawableById("DateLabel");
-        view.setColor(App.getApp().getProperty("ForegroundColor"));
-        view.setText(dateStr);   
+        setForegroundColorAndContentOnDrawable("DateLabel", dateString);
     }
 
 	function showLogoLabel() {
-        var viewLogoLabel = View.findDrawableById("LogoLabel");
-        viewLogoLabel.setColor(App.getApp().getProperty("ForegroundColor"));
-        viewLogoLabel.setText(App.getApp().getProperty("LogoString"));
+		logoString = App.getApp().getProperty("LogoString");
+		setForegroundColorAndContentOnDrawable("LogoLabel", logoString);
  	}
 	
 	function showTimeLabel() {
@@ -102,9 +92,13 @@ class m8mView extends Ui.WatchFace {
         }
         var timeString = Lang.format(timeFormat, [hours, clockTime.min.format("%02d")]);
 
-        // Update the view
-        var view = View.findDrawableById("TimeLabel");
+        setForegroundColorAndContentOnDrawable("TimeLabel", timeString);
+	}
+	
+	function setForegroundColorAndContentOnDrawable (drawableId, content)
+	{
+	    var view = View.findDrawableById(drawableId);
         view.setColor(App.getApp().getProperty("ForegroundColor"));
-        view.setText(timeString);        
+        view.setText(content);   
 	}
 }
