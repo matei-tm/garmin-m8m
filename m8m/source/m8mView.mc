@@ -63,8 +63,6 @@ class m8mView extends Ui.WatchFace {
     	
     	
 		setForegroundColorAndContentOnDrawable("BatteryLabel", dataString);
-		
-
     }
     
     function showDate() {
@@ -113,8 +111,16 @@ class m8mView extends Ui.WatchFace {
         var y = 39;
         var w = 10;
         var h = 4;
-
-        dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+		
+		if (batteryLevel > 20)
+		{
+			dc.setColor(App.getApp().getProperty("ForegroundColor"), Gfx.COLOR_TRANSPARENT);
+		}
+		else
+		{
+        	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+        }
+        
         dc.fillRectangle(x, y, batteryLevel/100*w, h);
     }
 }
