@@ -9,7 +9,7 @@ using Toybox.ActivityMonitor as Act;
 class m8mView extends Ui.WatchFace {
 	
     function initialize() {
-        WatchFace.initialize();       
+        WatchFace.initialize();
     }
 
     // Load your resources here
@@ -31,9 +31,10 @@ class m8mView extends Ui.WatchFace {
 		showBattery(dc);
         showDate();
         showSteps();
-
+        
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
+        updateBatteryLevel(dc);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -59,7 +60,11 @@ class m8mView extends Ui.WatchFace {
     
     function showBattery(dc) {
     	var dataString = (System.getSystemStats().battery + 0.5).toNumber().toString() + "%";
+    	
+    	
 		setForegroundColorAndContentOnDrawable("BatteryLabel", dataString);
+		
+
     }
     
     function showDate() {
@@ -95,10 +100,21 @@ class m8mView extends Ui.WatchFace {
         setForegroundColorAndContentOnDrawable("TimeLabel", timeString);
 	}
 	
-	function setForegroundColorAndContentOnDrawable (drawableId, content)
+	function setForegroundColorAndContentOnDrawable(drawableId, content)
 	{
 	    var view = View.findDrawableById(drawableId);
         view.setColor(App.getApp().getProperty("ForegroundColor"));
         view.setText(content);   
-	}
+	}	
+
+	function updateBatteryLevel(dc) {
+        var batteryLevel = System.getSystemStats().battery;
+        var x = 93;
+        var y = 39;
+        var w = 10;
+        var h = 4;
+
+        dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+        dc.fillRectangle(x, y, batteryLevel/100*w, h);
+    }
 }

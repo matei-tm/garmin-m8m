@@ -1,3 +1,0 @@
-<drawable-list id="BaterryBar"  foreground="Gfx.COLOR_WHITE" background="Gfx.COLOR_TRANSPARENT">
-    <shape type="rectangle" x="93" y="39" width="10" height="4" />
-</drawable-list>

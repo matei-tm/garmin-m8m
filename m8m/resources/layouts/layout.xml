@@ -9,8 +9,6 @@
    	<drawable id="OwlEyes"/>
    	<drawable id="ActivityBar"/>
    	<bitmap id="LogoImageClaws" x="5" y="5" filename="../images/owl-msm-claws.png" />
-   	<drawable id="BaterryBar"/>
-   	<drawable id="BluetoothBar"/>
    	<bitmap id="BaterryIcon" x="90" y="33" filename="../images/battery.png" />
    	<bitmap id="BluetoothIcon" x="35" y="65" filename="../images/bluetooth.png" />
 </layout>
