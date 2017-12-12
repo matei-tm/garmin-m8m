@@ -7,6 +7,8 @@ using Toybox.Time.Gregorian;
 using Toybox.ActivityMonitor as Act;
 
 class m8mView extends Ui.WatchFace {
+	hidden var settings;
+	hidden var owlClawsIcon;
 	
     function initialize() {
         WatchFace.initialize();
@@ -15,12 +17,14 @@ class m8mView extends Ui.WatchFace {
     // Load your resources here
     function onLayout(dc) {
         setLayout(Rez.Layouts.WatchFace(dc));
+        settings = System.getDeviceSettings();
     }
 
     // Called when this View is brought to the foreground. Restore
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() {
+    	owlClawsIcon = Ui.loadResource(Rez.Drawables.LogoImageClaws);
     }
 
     // Update the view
@@ -34,7 +38,11 @@ class m8mView extends Ui.WatchFace {
         
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
+        
         updateBatteryLevel(dc);
+        updateBluetoothStatus(dc);
+        updateStepsBar(dc);
+        updateOwlEyes(dc);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -122,5 +130,50 @@ class m8mView extends Ui.WatchFace {
         }
         
         dc.fillRectangle(x, y, batteryLevel/100*w, h);
+    }
+    
+    function updateBluetoothStatus(dc) {
+        var x = 43;
+        var y = 73;
+
+		if (settings.phoneConnected)
+		{
+			PhoneConnected.drawIcon(dc,x,y,App.getApp().getProperty("ForegroundColor"));
+		}
+		else
+		{
+        	PhoneConnected.drawIcon(dc,x,y,Gfx.COLOR_RED);
+        }       
+        
+    }
+    
+    function updateStepsBar(dc){
+    	var barColor = App.getApp().getProperty("ForegroundColor");
+        InfoMonitor.drawBarStep(
+	        dc,
+	        ActivityMonitor.getInfo().steps,
+	        ActivityMonitor.getInfo().stepGoal,
+	        20,
+	        125,
+	        115,
+	        Gfx.COLOR_RED,
+	        barColor,
+	        4);
+    	dc.drawBitmap(5,5,owlClawsIcon);    
+    }
+    
+    function updateOwlEyes(dc){
+    	if (Sys.getClockTime().min %2 == 0)
+    	{
+    		dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+    		dc.fillCircle(30, 40, 2);
+    		dc.fillCircle(55, 40, 2);
+    	}
+    	else
+    	{
+    		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+    		dc.fillRectangle(26, 36, 35, 5);
+    	
+    	}
     }
 }

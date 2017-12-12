@@ -1,3 +1,0 @@
-<drawable-list id="ActivityBar" background="Gfx.COLOR_TRANSPARENT">
-    <shape type="rectangle" x="20" y="125" width="115" height="4" color="Gfx.COLOR_RED" />
-</drawable-list>

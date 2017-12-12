@@ -6,9 +6,7 @@
     <label id="BatteryLabel" x="120" y="30" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
     <label id="DateLabel" x="center" y="180" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
    	<label id="StepsLabel" x="110" y="104" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_RED" />
-   	<drawable id="OwlEyes"/>
-   	<drawable id="ActivityBar"/>
-   	<bitmap id="LogoImageClaws" x="5" y="5" filename="../images/owl-msm-claws.png" />
+   	<drawable id="OwlEyes"/> 	
    	<bitmap id="BaterryIcon" x="90" y="33" filename="../images/battery.png" />
-   	<bitmap id="BluetoothIcon" x="35" y="65" filename="../images/bluetooth.png" />
+   	<drawable id="BluetoothBar"/>
 </layout>
