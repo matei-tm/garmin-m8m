@@ -4,7 +4,20 @@ using Toybox.Lang;
 
 module InfoSteps{
 
-	function drawBarStep(dc,steps,stepGoal,x,y,length,color,colorGoal,bar_width){
+	function drawBarStep(dc,steps,stepGoal,colorGoal){
+		drawBarStepDetailed(
+	        dc,
+	        steps,
+	        stepGoal,
+	        20,
+	        125,
+	        115,
+	        Gfx.COLOR_RED,
+	        colorGoal,
+	        4);
+	}
+
+	function drawBarStepDetailed(dc,steps,stepGoal,x,y,length,color,colorGoal,bar_width){
 	    var steps_fraction = steps.toFloat()/stepGoal*length;
 		var offset = 2;
 		dc.setColor(colorGoal,Gfx.COLOR_TRANSPARENT);

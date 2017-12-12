@@ -42,7 +42,7 @@ class m8mView extends Ui.WatchFace {
         updateBatteryLevel(dc);
         updateBluetoothStatus(dc);
         updateStepsBar(dc);
-        updateOwlEyes(dc);
+        updateOwlDynamics(dc);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -121,18 +121,10 @@ class m8mView extends Ui.WatchFace {
     }
     
     function updateBluetoothStatus(dc) {
-        var x = 43;
-        var y = 73;
-
-		if (settings.phoneConnected)
-		{
-			PhoneConnected.drawIcon(dc,x,y,App.getApp().getProperty("ForegroundColor"));
-		}
-		else
-		{
-        	PhoneConnected.drawIcon(dc,x,y,Gfx.COLOR_RED);
-        }       
-        
+     	InfoBluetooth.drawIconByConnectedState(
+     		dc, 
+     		App.getApp().getProperty("ForegroundColor"), 
+     		settings.phoneConnected);
     }
     
     function updateStepsBar(dc){
@@ -141,27 +133,12 @@ class m8mView extends Ui.WatchFace {
 	        dc,
 	        ActivityMonitor.getInfo().steps,
 	        ActivityMonitor.getInfo().stepGoal,
-	        20,
-	        125,
-	        115,
-	        Gfx.COLOR_RED,
-	        barColor,
-	        4);
-    	dc.drawBitmap(5,5,owlClawsIcon);    
+	        barColor);
     }
     
-    function updateOwlEyes(dc){
-    	if (Sys.getClockTime().min %2 == 0)
-    	{
-    		dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
-    		dc.fillCircle(30, 40, 2);
-    		dc.fillCircle(55, 40, 2);
-    	}
-    	else
-    	{
-    		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-    		dc.fillRectangle(26, 36, 35, 5);
-    	
-    	}
+    function updateOwlDynamics(dc){
+    	var position = Sys.getClockTime().min % 2;
+    	OwlShapes.drawEyesInPosition(dc, position);
+    	dc.drawBitmap(5,5,owlClawsIcon);  
     }
 }
