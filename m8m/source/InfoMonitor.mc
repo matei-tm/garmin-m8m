@@ -2,7 +2,7 @@ using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
 using Toybox.Lang;
 
-module InfoMonitor{
+module InfoSteps{
 
 	function drawBarStep(dc,steps,stepGoal,x,y,length,color,colorGoal,bar_width){
 	    var steps_fraction = steps.toFloat()/stepGoal*length;

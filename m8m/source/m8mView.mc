@@ -115,21 +115,9 @@ class m8mView extends Ui.WatchFace {
 
 	function updateBatteryLevel(dc) {
         var batteryLevel = System.getSystemStats().battery;
-        var x = 93;
-        var y = 39;
-        var w = 10;
-        var h = 4;
-		
-		if (batteryLevel > 20)
-		{
-			dc.setColor(App.getApp().getProperty("ForegroundColor"), Gfx.COLOR_TRANSPARENT);
-		}
-		else
-		{
-        	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
-        }
+        var color = App.getApp().getProperty("ForegroundColor");
         
-        dc.fillRectangle(x, y, batteryLevel/100*w, h);
+        InfoBattery.drawLevel(dc, batteryLevel, color);
     }
     
     function updateBluetoothStatus(dc) {
@@ -149,7 +137,7 @@ class m8mView extends Ui.WatchFace {
     
     function updateStepsBar(dc){
     	var barColor = App.getApp().getProperty("ForegroundColor");
-        InfoMonitor.drawBarStep(
+        InfoSteps.drawBarStep(
 	        dc,
 	        ActivityMonitor.getInfo().steps,
 	        ActivityMonitor.getInfo().stepGoal,
