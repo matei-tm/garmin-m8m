@@ -4,15 +4,24 @@
 
     <string id="BackgroundColorTitle">Hintergrundfarbe</string>
     <string id="ForegroundColorTitle">Vordergrundfarbe</string>
+    <string id="AlertColorTitle">Alarmfarbe</string>
     <string id="MilitaryFormatTitle">Militärformat für 24 Stunden</string>
 
-    <string id="ColorBlack">schwarz</string>
-    <string id="ColorDarkGray">dunkelgrau</string>
-    <string id="ColorLightGray">grau</string>
-    <string id="ColorWhite">weiß</string>
-    <string id="ColorBlue">blau</string>
-    <string id="ColorRed">rot</string>
-    
+	<string id="COLOR_WHITE">weiß</string>
+    <string id="COLOR_LT_GRAY">grau</string>
+    <string id="COLOR_DK_GRAY">dunkelgrau</string>
+    <string id="COLOR_BLACK">schwarz</string>
+    <string id="COLOR_RED">rot</string>
+    <string id="COLOR_DK_RED">dunkelrot</string>
+    <string id="COLOR_ORANGE">orange</string>
+    <string id="COLOR_YELLOW">gelb</string>
+    <string id="COLOR_GREEN">grün</string>
+    <string id="COLOR_DK_GREEN">dunkelgrün</string>
+    <string id="COLOR_BLUE">blau</string>
+    <string id="COLOR_DK_BLUE">dunkelblau</string>
+    <string id="COLOR_PURPLE">lila</string>
+    <string id="COLOR_PINK">pinke</string>
+          
     <string id="LogoStringTitle">Logo-Text</string>
 
 </strings>

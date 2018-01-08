@@ -15,17 +15,17 @@ module OwlShapes{
     	dc.fillRectangle(26, 36, 35, 5);
 	}
 	
-	function drawWideEyes(dc){
-		dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+	function drawWideEyes(dc, alertColor){
+		dc.setColor(alertColor, Gfx.COLOR_TRANSPARENT);
     	dc.fillCircle(30, 40, 2);
     	dc.fillCircle(55, 40, 2);
 	}
 	
-	function drawEyesInPosition(dc, position){
+	function drawEyesInPosition(dc, position, alertColor){
 
     	if (position == 0)
     	{
-			drawWideEyes(dc);
+			drawWideEyes(dc, alertColor);
     	}
     	else
     	{

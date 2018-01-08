@@ -116,15 +116,17 @@ class m8mView extends Ui.WatchFace {
 	function updateBatteryLevel(dc) {
         var batteryLevel = System.getSystemStats().battery;
         var color = App.getApp().getProperty("ForegroundColor");
+        var alertColor = App.getApp().getProperty("AlertColor");
         
-        InfoBattery.drawLevel(dc, batteryLevel, color);
+        InfoBattery.drawLevel(dc, batteryLevel, color, alertColor);
     }
     
     function updateBluetoothStatus(dc) {
      	InfoBluetooth.drawIconByConnectedState(
      		dc, 
      		App.getApp().getProperty("ForegroundColor"),
-     		App.getApp().getProperty("BackgroundColor"),  
+     		App.getApp().getProperty("BackgroundColor"), 
+     		App.getApp().getProperty("AlertColor"),
      		settings.phoneConnected);
     }
     
@@ -134,13 +136,15 @@ class m8mView extends Ui.WatchFace {
 	        dc,
 	        ActivityMonitor.getInfo().steps,
 	        ActivityMonitor.getInfo().stepGoal,
-	        Gfx.COLOR_RED,
+	        App.getApp().getProperty("AlertColor"),
 	        barColor);
     }
     
     function updateOwlDynamics(dc){
+    	var alertColor = App.getApp().getProperty("AlertColor");
+    
     	var position = Sys.getClockTime().min % 2;
-    	OwlShapes.drawEyesInPosition(dc, position);
+    	OwlShapes.drawEyesInPosition(dc, position, alertColor);
     	dc.drawBitmap(5,5,owlClawsIcon);  
     }
 }

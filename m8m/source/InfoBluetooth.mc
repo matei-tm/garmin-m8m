@@ -15,17 +15,17 @@ module InfoBluetooth{
 		dc.fillPolygon([[x+size,y-size],[x+size+width,y-size+width],[x-size+width,y+size+width],[x-size,y+size]]);
 	}
 	
-	function drawCameo(backColor)
+	function drawCameo(dc, backColor)
 	{
 		dc.setColor(backColor, Gfx.COLOR_TRANSPARENT);
     	dc.fillEllipse(43, 73, 5, 7);
 	}
 	
-	function drawIconByConnectedState(dc, color, backcolor, isConnected){
+	function drawIconByConnectedState(dc, color, backColor, alertColor, isConnected){
         var x = 43;
         var y = 73;
 
-		drawCameo(backColor);
+		drawCameo(dc, backColor);
 		
 		if (isConnected)
 		{
@@ -33,7 +33,7 @@ module InfoBluetooth{
 		}
 		else
 		{
-        	drawIcon(dc,x,y,Gfx.COLOR_RED);
+        	drawIcon(dc,x,y,alertColor);
         }  
 	}
 }

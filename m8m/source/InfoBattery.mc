@@ -10,7 +10,7 @@ module InfoBattery{
     var offset = 1;
     var penWidth = 1;
 
-	function drawLevel(dc, batteryLevel, color) {
+	function drawLevel(dc, batteryLevel, color, alertColor) {
         
 		
 		if (batteryLevel > 20)
@@ -19,14 +19,14 @@ module InfoBattery{
 		}
 		else
 		{
-        	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+        	dc.setColor(alertColor, Gfx.COLOR_TRANSPARENT);
         }
         
         dc.fillRectangle(x, y, batteryLevel/100*w, h);
-        drawBatteryShape(dc, batteryLevel, color);
+        drawBatteryShape(dc, batteryLevel, color, alertColor);
     }
     
-    function drawBatteryShape(dc, batteryLevel, color) {       
+    function drawBatteryShape(dc, batteryLevel, color, alertColor) {       
 		
 		if (batteryLevel > 20)
 		{
@@ -34,7 +34,7 @@ module InfoBattery{
 		}
 		else
 		{
-        	dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
+        	dc.setColor(alertColor, Gfx.COLOR_TRANSPARENT);
         }
         
         dc.setPenWidth(1);

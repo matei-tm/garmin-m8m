@@ -7,5 +7,4 @@
     <label id="DateLabel" x="center" y="180" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
    	<label id="StepsLabel" x="110" y="104" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_RED" />
    	<drawable id="OwlEyes"/> 	
-   	<drawable id="BluetoothBar"/>
 </layout>
