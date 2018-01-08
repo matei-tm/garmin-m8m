@@ -1,0 +1,18 @@
+<strings>
+
+    <string id="AppName">m8m</string>
+
+    <string id="BackgroundColorTitle">Hintergrundfarbe</string>
+    <string id="ForegroundColorTitle">Vordergrundfarbe</string>
+    <string id="MilitaryFormatTitle">Militärformat für 24 Stunden</string>
+
+    <string id="ColorBlack">schwarz</string>
+    <string id="ColorDarkGray">dunkelgrau</string>
+    <string id="ColorLightGray">grau</string>
+    <string id="ColorWhite">weiß</string>
+    <string id="ColorBlue">blau</string>
+    <string id="ColorRed">rot</string>
+    
+    <string id="LogoStringTitle">Logo-Text</string>
+
+</strings>
