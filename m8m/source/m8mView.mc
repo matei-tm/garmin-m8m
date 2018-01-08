@@ -9,6 +9,10 @@ using Toybox.ActivityMonitor as Act;
 class m8mView extends Ui.WatchFace {
 	hidden var settings;
 	hidden var owlClawsIcon;
+
+	hidden var foregroundColor;
+	hidden var backgroundColor;
+	hidden var alertColor;
 	
     function initialize() {
         WatchFace.initialize();
@@ -26,9 +30,16 @@ class m8mView extends Ui.WatchFace {
     function onShow() {
     	owlClawsIcon = Ui.loadResource(Rez.Drawables.LogoImageClaws);
     }
+    
+    function readColorSettings(){
+        foregroundColor = App.getApp().getProperty("ForegroundColor");
+    	backgroundColor = App.getApp().getProperty("BackgroundColor");
+    	alertColor = App.getApp().getProperty("AlertColor");
+    }
 
     // Update the view
     function onUpdate(dc) {
+		readColorSettings();
     
 		showTimeLabel();
 		showLogoLabel();
@@ -109,40 +120,36 @@ class m8mView extends Ui.WatchFace {
 	function setForegroundColorAndContentOnDrawable(drawableId, content)
 	{
 	    var view = View.findDrawableById(drawableId);
-        view.setColor(App.getApp().getProperty("ForegroundColor"));
+        view.setColor(foregroundColor);
         view.setText(content);   
 	}	
 
 	function updateBatteryLevel(dc) {
         var batteryLevel = System.getSystemStats().battery;
-        var color = App.getApp().getProperty("ForegroundColor");
-        var alertColor = App.getApp().getProperty("AlertColor");
-        
-        InfoBattery.drawLevel(dc, batteryLevel, color, alertColor);
+       
+        InfoBattery.drawLevel(dc, batteryLevel, foregroundColor, alertColor);
     }
     
     function updateBluetoothStatus(dc) {
      	InfoBluetooth.drawIconByConnectedState(
      		dc, 
-     		App.getApp().getProperty("ForegroundColor"),
-     		App.getApp().getProperty("BackgroundColor"), 
-     		App.getApp().getProperty("AlertColor"),
+     		foregroundColor,
+     		backgroundColor, 
+     		alertColor,
      		settings.phoneConnected);
     }
     
     function updateStepsBar(dc){
-    	var barColor = App.getApp().getProperty("ForegroundColor");
+    	var barColor = foregroundColor;
         InfoSteps.drawBarStep(
 	        dc,
 	        ActivityMonitor.getInfo().steps,
 	        ActivityMonitor.getInfo().stepGoal,
-	        App.getApp().getProperty("AlertColor"),
+	        alertColor,
 	        barColor);
     }
     
-    function updateOwlDynamics(dc){
-    	var alertColor = App.getApp().getProperty("AlertColor");
-    
+    function updateOwlDynamics(dc){   
     	var position = Sys.getClockTime().min % 2;
     	OwlShapes.drawEyesInPosition(dc, position, alertColor);
     	dc.drawBitmap(5,5,owlClawsIcon);  
