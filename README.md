@@ -6,6 +6,7 @@ Garmin Vivoactive HR smart watch family application
 * [Features](#features)
 * [Settings](#settings)
 * [Screen legend](#screen-legend)
+* [Localization](#localization)
 
 ## Screenshots
 ![even minute](screenshot/s00.png)
@@ -20,13 +21,37 @@ Garmin Vivoactive HR smart watch family application
 * Steps bar as percent from daily goal
 * Time
 * Date
+* Customizable colors
 
 ## Settings
-The alerts on bluetooth and battery will be painted in red. The same color is applied to Steps Bar evolution.
 ![settings](screenshot/s99.png)
+
+### Background color
+The background color for the watch face
+
+### Foreground color
+The color for all texts and symbols (battery, bluetooth, steps bar layout)
+
+### Alert color
+The color for:
+* progress on the steps bar
+* low level battery
+* disconnected bluetooth
+* owl eyes when wide
+
+### Miltary format for 24 hours
+Available only when the watch is set to output 24-hour time. 
+In this case the double column is removed.
+
+![military](screenshot/s10.png)
 
 ## Screen Legend
 ![settings](screenshot/s30.png)
 
+## Localization
+Available languages:
+* english
+* french
+* german
 
 
