@@ -123,7 +123,8 @@ class m8mView extends Ui.WatchFace {
     function updateBluetoothStatus(dc) {
      	InfoBluetooth.drawIconByConnectedState(
      		dc, 
-     		App.getApp().getProperty("ForegroundColor"), 
+     		App.getApp().getProperty("ForegroundColor"),
+     		App.getApp().getProperty("BackgroundColor"),  
      		settings.phoneConnected);
     }
     
@@ -133,6 +134,7 @@ class m8mView extends Ui.WatchFace {
 	        dc,
 	        ActivityMonitor.getInfo().steps,
 	        ActivityMonitor.getInfo().stepGoal,
+	        Gfx.COLOR_RED,
 	        barColor);
     }
     

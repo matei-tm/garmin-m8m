@@ -15,10 +15,18 @@ module InfoBluetooth{
 		dc.fillPolygon([[x+size,y-size],[x+size+width,y-size+width],[x-size+width,y+size+width],[x-size,y+size]]);
 	}
 	
-	function drawIconByConnectedState(dc, color, isConnected){
+	function drawCameo(backColor)
+	{
+		dc.setColor(backColor, Gfx.COLOR_TRANSPARENT);
+    	dc.fillEllipse(43, 73, 5, 7);
+	}
+	
+	function drawIconByConnectedState(dc, color, backcolor, isConnected){
         var x = 43;
         var y = 73;
 
+		drawCameo(backColor);
+		
 		if (isConnected)
 		{
 			drawIcon(dc,x,y,color);
