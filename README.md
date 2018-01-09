@@ -9,8 +9,8 @@ Garmin Vivoactive HR smart watch family application
 * [Localization](#localization)
 
 ## Screenshots
-![even minute](screenshot/s00.png)
-![odd minute](screenshot/s01.png)
+![even minute](m8m/screenshot/s00.png)
+![odd minute](m8m/screenshot/s01.png)
 
 ## Features
 * Blinking eyes owl
@@ -24,7 +24,7 @@ Garmin Vivoactive HR smart watch family application
 * Customizable colors
 
 ## Settings
-![settings](screenshot/s99.png)
+![settings](m8m/screenshot/s99.png)
 
 ### Background color
 The background color for the watch face
@@ -43,10 +43,10 @@ The color for:
 Available only when the watch is set to output 24-hour time. 
 In this case the double column is removed.
 
-![military](screenshot/s10.png)
+![military](m8m/screenshot/s10.png)
 
 ## Screen Legend
-![settings](screenshot/s30.png)
+![settings](m8m/screenshot/s30.png)
 
 ## Localization
 Available languages:
