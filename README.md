@@ -7,6 +7,7 @@ Garmin Vivoactive HR smart watch family application
 3. [Settings](#settings)
 4. [Screen legend](#screen-legend)
 5. [Localization](#localization)
+6. [Garmin store](#garmin-store)
 
 ## Screenshots
 ![even minute](m8m/screenshot/s00.png)
@@ -55,3 +56,6 @@ Available languages:
 * german
 
 
+## Garmin store
+The application was submitted to Garmin store and is waiting for approval.
+[https://apps.garmin.com/en-US/apps/b18ed990-4d72-437f-837c-1f3dcef1ad5a](https://apps.garmin.com/en-US/apps/b18ed990-4d72-437f-837c-1f3dcef1ad5a)
