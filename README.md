@@ -3,10 +3,10 @@ Garmin Vivoactive HR smart watch family application
 
 # Table of Contents
 1. [Screenshots](#screenshots)
-* [Features](#features)
-* [Settings](#settings)
-* [Screen legend](#screen-legend)
-* [Localization](#localization)
+2. [Features](#features)
+3. [Settings](#settings)
+4. [Screen legend](#screen-legend)
+5. [Localization](#localization)
 
 ## Screenshots
 ![even minute](m8m/screenshot/s00.png)
