@@ -57,5 +57,5 @@ Available languages:
 
 
 ## Garmin store
-The application was submitted to Garmin store and is waiting for approval.
+The application may be downloaded from the Garmin store.
 [https://apps.garmin.com/en-US/apps/b18ed990-4d72-437f-837c-1f3dcef1ad5a](https://apps.garmin.com/en-US/apps/b18ed990-4d72-437f-837c-1f3dcef1ad5a)
