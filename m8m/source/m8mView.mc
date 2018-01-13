@@ -25,7 +25,8 @@ class m8mView extends Ui.WatchFace {
     // Load your resources here
     function onLayout(dc) {
         setLayout(Rez.Layouts.WatchFace(dc));
-        settings = System.getDeviceSettings();    
+        settings = System.getDeviceSettings(); 
+        customSettings = new FactoryFormCustomiser.Setter(settings);    
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -44,8 +45,7 @@ class m8mView extends Ui.WatchFace {
     }
 
     // Update the view
-    function onUpdate(dc) {
-    	customSettings = new FactoryFormCustomiser.Setter(dc);    
+    function onUpdate(dc) { 
 		readColorSettings();
     
 		showTimeLabel();
