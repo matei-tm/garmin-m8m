@@ -13,15 +13,19 @@ class m8mView extends Ui.WatchFace {
 	hidden var foregroundColor;
 	hidden var backgroundColor;
 	hidden var alertColor;
+	hidden var customSettings;
+	
+	hidden var owlPositionX;
 	
     function initialize() {
-        WatchFace.initialize();
+        WatchFace.initialize(); 
     }
-
+    
+ 
     // Load your resources here
     function onLayout(dc) {
         setLayout(Rez.Layouts.WatchFace(dc));
-        settings = System.getDeviceSettings();
+        settings = System.getDeviceSettings();    
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -29,6 +33,8 @@ class m8mView extends Ui.WatchFace {
     // loading resources into memory.
     function onShow() {
     	owlClawsIcon = Ui.loadResource(Rez.Drawables.LogoImageClaws);
+    	var owlView = View.findDrawableById("LogoImage");
+        owlPositionX = owlView.locX;
     }
     
     function readColorSettings(){
@@ -39,6 +45,7 @@ class m8mView extends Ui.WatchFace {
 
     // Update the view
     function onUpdate(dc) {
+    	customSettings = new FactoryFormCustomiser.Setter(dc);    
 		readColorSettings();
     
 		showTimeLabel();
@@ -119,15 +126,21 @@ class m8mView extends Ui.WatchFace {
 	
 	function setForegroundColorAndContentOnDrawable(drawableId, content)
 	{
-	    var view = View.findDrawableById(drawableId);
+	    var view = View.findDrawableById(drawableId);	    
         view.setColor(foregroundColor);
         view.setText(content);   
 	}	
 
 	function updateBatteryLevel(dc) {
-        var batteryLevel = System.getSystemStats().battery;
-       
-        InfoBattery.drawLevel(dc, batteryLevel, foregroundColor, alertColor);
+        var batteryLevel = System.getSystemStats().battery;     
+
+        InfoBattery.drawLevel(
+        	dc, 
+        	batteryLevel, 
+        	foregroundColor, 
+        	alertColor, 
+        	customSettings.batteryX,
+        	customSettings.batteryY);
     }
     
     function updateBluetoothStatus(dc) {
@@ -136,7 +149,8 @@ class m8mView extends Ui.WatchFace {
      		foregroundColor,
      		backgroundColor, 
      		alertColor,
-     		settings.phoneConnected);
+     		settings.phoneConnected,
+     		owlPositionX);
     }
     
     function updateStepsBar(dc){
@@ -150,8 +164,9 @@ class m8mView extends Ui.WatchFace {
     }
     
     function updateOwlDynamics(dc){   
-    	var position = Sys.getClockTime().min % 2;
-    	OwlShapes.drawEyesInPosition(dc, position, alertColor);
-    	dc.drawBitmap(5,5,owlClawsIcon);  
+    	
+    	var areClosed = Sys.getClockTime().min % 2;
+    	OwlShapes.drawEyesInPosition(dc, areClosed, alertColor, owlPositionX);
+    	dc.drawBitmap(owlPositionX,5,owlClawsIcon);  
     }
 }

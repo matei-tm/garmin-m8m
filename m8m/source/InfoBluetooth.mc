@@ -15,17 +15,17 @@ module InfoBluetooth{
 		dc.fillPolygon([[x+size,y-size],[x+size+width,y-size+width],[x-size+width,y+size+width],[x-size,y+size]]);
 	}
 	
-	function drawCameo(dc, backColor)
+	function drawCameo(dc, backColor, x, y)
 	{
 		dc.setColor(backColor, Gfx.COLOR_TRANSPARENT);
-    	dc.fillEllipse(43, 73, 5, 7);
+    	dc.fillEllipse(x, y, 5, 7);
 	}
 	
-	function drawIconByConnectedState(dc, color, backColor, alertColor, isConnected){
-        var x = 43;
+	function drawIconByConnectedState(dc, color, backColor, alertColor, isConnected, owlPositionX){
+        var x = owlPositionX + 38;
         var y = 73;
 
-		drawCameo(dc, backColor);
+		drawCameo(dc, backColor, x, y);
 		
 		if (isConnected)
 		{

@@ -10,8 +10,9 @@ module InfoBattery{
     var offset = 1;
     var penWidth = 1;
 
-	function drawLevel(dc, batteryLevel, color, alertColor) {
-        
+	function drawLevel(dc, batteryLevel, color, alertColor, posX, posY) {
+        x = posX;
+        y = posY;
 		
 		if (batteryLevel > 20)
 		{

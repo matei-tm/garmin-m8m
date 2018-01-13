@@ -10,26 +10,34 @@ module OwlShapes{
     var offset = 1;
     var penWidth = 1;
     
-	function drawShutEyes(dc){
+	function drawShutEyes(dc, owlPositionX){
 		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-    	dc.fillRectangle(26, 36, 35, 5);
+    	dc.fillRectangle(owlPositionX + 21, 36, 35, 5);
 	}
 	
-	function drawWideEyes(dc, alertColor){
+	function drawWideEyes(dc, alertColor, owlPositionX){
 		dc.setColor(alertColor, Gfx.COLOR_TRANSPARENT);
-    	dc.fillCircle(30, 40, 2);
-    	dc.fillCircle(55, 40, 2);
+    	dc.fillCircle(owlPositionX + 25, 40, 2);
+    	dc.fillCircle(owlPositionX + 50, 40, 2);
 	}
 	
-	function drawEyesInPosition(dc, position, alertColor){
+	function drawEyesInPosition(dc, eyesClosed, alertColor, owlPositionX){
+		dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
+		dc.fillCircle(owlPositionX + 25, 40, 4);
+    	dc.fillCircle(owlPositionX + 50, 40, 4);
+    	
+		dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+		dc.fillCircle(owlPositionX + 25, 40, 2);
+    	dc.fillCircle(owlPositionX + 50, 40, 2);		
 
-    	if (position == 0)
+		
+    	if (eyesClosed == 0)
     	{
-			drawWideEyes(dc, alertColor);
+			drawWideEyes(dc, alertColor, owlPositionX);
     	}
     	else
     	{
-    		drawShutEyes(dc);    	
+    		drawShutEyes(dc, owlPositionX);    	
     	}
 	}
 }

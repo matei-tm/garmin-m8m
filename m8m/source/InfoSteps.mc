@@ -5,13 +5,15 @@ using Toybox.Lang;
 module InfoSteps{
 
 	function drawBarStep(dc,steps,stepGoal,colorEffective,colorGoal){
+		var length = dc.getWidth()-20-13;
+		
 		drawBarStepDetailed(
 	        dc,
 	        steps,
 	        stepGoal,
 	        20,
 	        125,
-	        115,
+	        length,
 	        colorEffective,
 	        colorGoal,
 	        4);
