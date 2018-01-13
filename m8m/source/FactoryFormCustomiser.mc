@@ -18,6 +18,12 @@ module FactoryFormCustomiser
 				batteryY = 25;
 			}
 			
+			if (width == 205 && height == 148)
+			{
+				batteryX = 160;
+				batteryY = 15;
+			}
+			
 		}
 	}
 }

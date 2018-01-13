@@ -14,6 +14,8 @@ Garmin Vivoactive HR smart watch family application
 ![odd minute](m8m/screenshot/s01.png)
 ![even minute vv3](m8m/screenshot/s03.png)
 ![odd minute vv3](m8m/screenshot/s04.png)
+![even minute v](m8m/screenshot/s05.png)
+![odd minute v](m8m/screenshot/s06.png)
 
 ## Features
 * Blinking eyes owl
