@@ -9,8 +9,6 @@ module FactoryFormCustomiser
 			var width = settings.screenWidth;
 			var height = settings.screenHeight;
 			var shape = settings.screenShape;
-
-			System.println(shape); // 1=round, 3=rectangle_long			
 			
 			batteryX = 93;
 			batteryY = 39;
