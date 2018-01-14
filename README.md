@@ -1,4 +1,4 @@
-# garmin-m8m 0.0.2
+# garmin-m8m 0.0.3
 Garmin smart watch application.
 
 # Table of Contents
