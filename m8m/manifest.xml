@@ -2,8 +2,18 @@
     <iq:application entry="m8mApp" id="9d612d3171d24d7baea5cb2245746c81" launcherIcon="@Drawables.LauncherIcon" name="@Strings.AppName" type="watchface">
         <iq:products>
             <iq:product id="approachs60"/>
+            <iq:product id="epix"/>
+            <iq:product id="fenix3"/>
+            <iq:product id="fenix3_hr"/>
             <iq:product id="fenix5"/>
+            <iq:product id="fenix5s"/>
             <iq:product id="fenix5x"/>
+            <iq:product id="fenixchronos"/>
+            <iq:product id="fr230"/>
+            <iq:product id="fr235"/>
+            <iq:product id="fr630"/>
+            <iq:product id="fr735xt"/>
+            <iq:product id="fr920xt"/>
             <iq:product id="fr935"/>
             <iq:product id="vivoactive"/>
             <iq:product id="vivoactive3"/>

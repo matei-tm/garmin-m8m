@@ -70,6 +70,14 @@ The application may be downloaded from the Garmin store.
 * Fenix 5
 * Fenix 5x
 * Forerunner 935
+* Fenix 3
+* Fenix 5s
+* Fenix Chronos
+* Fenix Epix
+* Forerunner 920xt
+* Forerunner 230
+* Forerunner 630
+* Forerunner 735
 
 ## Screenshots
 ![even minute](m8m/screenshot/s00.png)
@@ -86,4 +94,23 @@ The application may be downloaded from the Garmin store.
 ![minute](m8m/screenshot/s12-fenix5x.png)
 ![minute](m8m/screenshot/s13-fre935.png)
 ![minute](m8m/screenshot/s14-fre935.png)
+![minute](m8m/screenshot/s15-fenix3.png)
+![minute](m8m/screenshot/s16-fenix3.png)
+![minute](m8m/screenshot/s17-fenix5s.png)
+![minute](m8m/screenshot/s18-fenix5s.png)
+![minute](m8m/screenshot/s19-fenixchronos.png)
+![minute](m8m/screenshot/s20-fenixchronos.png)
+![minute](m8m/screenshot/s21-epix.png)
+![minute](m8m/screenshot/s22-epix.png)
+![minute](m8m/screenshot/s23-fre920xt.png)
+![minute](m8m/screenshot/s24-fre920xt.png)
+![minute](m8m/screenshot/s25-fre230.png)
+![minute](m8m/screenshot/s26-fre230.png)
+![minute](m8m/screenshot/s27-fre235.png)
+![minute](m8m/screenshot/s28-fre235.png)
+![minute](m8m/screenshot/s30-fre630.png)
+![minute](m8m/screenshot/s30.png)
+![minute](m8m/screenshot/s31-fre630.png)
+![minute](m8m/screenshot/s31-fre735.png)
+![minute](m8m/screenshot/s32-fre735.png)
 ![minute](m8m/screenshot/s10.png)
