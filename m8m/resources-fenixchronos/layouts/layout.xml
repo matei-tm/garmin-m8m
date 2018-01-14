@@ -1,9 +1,9 @@
 <layout id="WatchFace">
     <drawable class="Background" />
     <bitmap id="LogoImage" x="65" y="5" filename="../../resources/images/owl-msm.png" />
-    <label id="TimeLabel" x="center" y="(dc.getHeight() / 2) + (Gfx.getFontHeight(Gfx.FONT_XTINY) / 2 + 15)" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />    
+    <label id="TimeLabel" x="center" y="135" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />    
     <label id="LogoLabel" x="205" y="70" font="Gfx.FONT_LARGE" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_WHITE" />
     <label id="BatteryLabel" x="180" y="30" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_WHITE" />
     <label id="DateLabel" x="center" y="190" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
-   	<label id="StepsLabel" x="210" y="(dc.getHeight() / 2) - (Gfx.getFontHeight(Gfx.FONT_XTINY) / 2 - 5)" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_RED" />
+   	<label id="StepsLabel" x="210" y="102" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_RED" />
 </layout>
