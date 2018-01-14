@@ -29,6 +29,15 @@ Garmin smart watch application.
 ## Settings
 ![settings](screenshot/s99.png)
 
+### Setting process
+![step1](screenshot/s-0999-configure.png)
+![step2](screenshot/s-1000-configure.png)
+![step3](screenshot/s-1001-configure.png)
+![step4](screenshot/s-1002-configure.png)
+![step5](screenshot/s-1003-configure.png)
+![step6](screenshot/s-1004-configure.png)
+![step7](screenshot/s-1005-configure.png)
+
 ### Background color
 The background color for the watch face
 
