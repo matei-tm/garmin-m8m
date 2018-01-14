@@ -2,6 +2,9 @@
     <iq:application entry="m8mApp" id="9d612d3171d24d7baea5cb2245746c81" launcherIcon="@Drawables.LauncherIcon" name="@Strings.AppName" type="watchface">
         <iq:products>
             <iq:product id="approachs60"/>
+            <iq:product id="d2bravo"/>
+            <iq:product id="d2bravo_titanium"/>
+            <iq:product id="d2charlie"/>
             <iq:product id="epix"/>
             <iq:product id="fenix3"/>
             <iq:product id="fenix3_hr"/>
