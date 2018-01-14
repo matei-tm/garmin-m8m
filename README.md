@@ -109,8 +109,6 @@ The application may be downloaded from the Garmin store.
 ![minute](m8m/screenshot/s27-fre235.png)
 ![minute](m8m/screenshot/s28-fre235.png)
 ![minute](m8m/screenshot/s30-fre630.png)
-![minute](m8m/screenshot/s30.png)
 ![minute](m8m/screenshot/s31-fre630.png)
 ![minute](m8m/screenshot/s31-fre735.png)
 ![minute](m8m/screenshot/s32-fre735.png)
-![minute](m8m/screenshot/s10.png)
