@@ -30,13 +30,12 @@ Garmin smart watch application.
 ![settings](screenshot/s99.png)
 
 ### Setting process
-![step1](screenshot/s-0999-configure.png)
-![step2](screenshot/s-1000-configure.png)
-![step3](screenshot/s-1001-configure.png)
-![step4](screenshot/s-1002-configure.png)
-![step5](screenshot/s-1003-configure.png)
-![step6](screenshot/s-1004-configure.png)
-![step7](screenshot/s-1005-configure.png)
+<a href="url"><img src="screenshot/s-0999-configure.png" align="center" height="512" width="288" ></a>
+<a href="url"><img src="screenshot/s-1000-configure.png" align="center" height="512" width="288" ></a>
+<a href="url"><img src="screenshot/s-1001-configure.png" align="center" height="512" width="288" ></a>
+<a href="url"><img src="screenshot/s-1002-configure.png" align="center" height="512" width="288" ></a>
+<a href="url"><img src="screenshot/s-1003-configure.png" align="center" height="512" width="288" ></a>
+<a href="url"><img src="screenshot/s-1004-configure.png" align="center" height="512" width="288" ></a>
 
 ### Background color
 The background color for the watch face
