@@ -41,6 +41,9 @@ The application should be set up from Garmin IQ application on your phone/tablet
 <a href="url"><img src="m8m/screenshot/s-1004-configure.png" align="center" height="512" width="288" ></a>
 <a href="url"><img src="m8m/screenshot/s-1005-configure.png" align="center" height="512" width="288" ></a>
 
+### Logo text
+The three letters customizable logo
+
 ### Background color
 The background color for the watch face
 
@@ -53,6 +56,15 @@ The color for:
 * low level battery
 * disconnected bluetooth
 * owl eyes when wide
+
+### Owl's Face color
+The owl face color
+
+### Owl's Eyes Contour Color
+The owl eyes contour color
+
+### Owl's Eyes Color
+The owl eyes color
 
 ### Miltary format for 24 hours
 Available only when the watch is set to output 24-hour time. 
