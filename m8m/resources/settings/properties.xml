@@ -1,10 +1,11 @@
 <properties>
-
+    <property id="LogoText" type="number">1</property>
+    <property id="LogoString" type="string">msm</property>
     <property id="BackgroundColor" type="number">0x000000</property>
     <property id="ForegroundColor" type="number">0xFFFFFF</property>
     <property id="AlertColor" type="number">0xFF0000</property>
+    <property id="OwlBackgroundColor" type="number">0xFFFFFF</property>
+    <property id="OwlForegroundColor" type="number">0x000000</property>
+    <property id="OwlAlertColor" type="number">0xFF0000</property>
     <property id="UseMilitaryFormat" type="boolean">false</property>
-    <property id="LogoText" type="number">1</property>
-    <property id="LogoString" type="string">msm</property>
-
 </properties>

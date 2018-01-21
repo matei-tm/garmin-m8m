@@ -1,10 +1,16 @@
 <strings>
 
     <string id="AppName">m8m</string>
-
+    <string id="LogoStringTitle">Logo-Text</string>
+    
+    <string id="OwlBackgroundColorTitle">Die Gesichtsfarbe der Eule</string>
+    <string id="OwlForegroundColorTitle">Eule Augen Konturfarbe</string>
+    <string id="OwlAlertColorTitle">Augenfarbe der Eule</string>
+    
     <string id="BackgroundColorTitle">Hintergrundfarbe</string>
     <string id="ForegroundColorTitle">Vordergrundfarbe</string>
     <string id="AlertColorTitle">Alarmfarbe</string>
+    
     <string id="MilitaryFormatTitle">Militärformat für 24 Stunden</string>
 
 	<string id="COLOR_WHITE">weiß</string>
@@ -22,6 +28,6 @@
     <string id="COLOR_PURPLE">lila</string>
     <string id="COLOR_PINK">pinke</string>
           
-    <string id="LogoStringTitle">Logo-Text</string>
+
 
 </strings>

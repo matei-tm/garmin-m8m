@@ -9,10 +9,16 @@ using Toybox.ActivityMonitor as Act;
 class m8mView extends Ui.WatchFace {
 	hidden var settings;
 	hidden var owlClawsIcon;
+	hidden var owlShape;
 
 	hidden var foregroundColor;
 	hidden var backgroundColor;
 	hidden var alertColor;
+	
+	hidden var eyeColor;
+	hidden var eyeContourColor;
+	hidden var faceColor;
+	
 	hidden var customSettings;
 	
 	hidden var owlPositionX;
@@ -33,6 +39,7 @@ class m8mView extends Ui.WatchFace {
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() {
+    	owlShape = Ui.loadResource(Rez.Drawables.LogoImageOwl);
     	owlClawsIcon = Ui.loadResource(Rez.Drawables.LogoImageClaws);
     	var owlView = View.findDrawableById("LogoImage");
         owlPositionX = owlView.locX;
@@ -42,7 +49,11 @@ class m8mView extends Ui.WatchFace {
         foregroundColor = App.getApp().getProperty("ForegroundColor");
     	backgroundColor = App.getApp().getProperty("BackgroundColor");
     	alertColor = App.getApp().getProperty("AlertColor");
-    }
+    	
+        eyeContourColor = App.getApp().getProperty("OwlForegroundColor");
+    	faceColor = App.getApp().getProperty("OwlBackgroundColor");
+    	eyeColor = App.getApp().getProperty("OwlAlertColor");
+   	}
 
     // Update the view
     function onUpdate(dc) { 
@@ -58,8 +69,7 @@ class m8mView extends Ui.WatchFace {
         View.onUpdate(dc);
         
         updateBatteryLevel(dc);
-        updateBluetoothStatus(dc);
-        updateStepsBar(dc);
+        updateBluetoothStatus(dc);        
         updateOwlDynamics(dc);
     }
 
@@ -163,10 +173,12 @@ class m8mView extends Ui.WatchFace {
 	        barColor);
     }
     
-    function updateOwlDynamics(dc){   
-    	
-    	var areClosed = Sys.getClockTime().min % 2;
-    	OwlShapes.drawEyesInPosition(dc, areClosed, alertColor, owlPositionX);
+    function updateOwlDynamics(dc){   	
+    	var eyesAreClosed = Sys.getClockTime().min % 2;
+    	  
+    	OwlShapes.drawEyesInPosition(dc, eyesAreClosed, eyeColor, eyeContourColor, faceColor, owlPositionX);
+    	dc.drawBitmap(owlPositionX,5,owlShape);
+    	updateStepsBar(dc);
     	dc.drawBitmap(owlPositionX,5,owlClawsIcon);  
     }
 }

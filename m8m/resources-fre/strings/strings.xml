@@ -1,10 +1,16 @@
 <strings>
 
     <string id="AppName">m8m</string>
-
+    <string id="LogoStringTitle">Texte du logo</string>
+    
+    <string id="OwlBackgroundColorTitle">Couleur du visage du hibou</string>
+    <string id="OwlForegroundColorTitle">Couleur du contour des yeux</string>
+    <string id="OwlAlertColorTitle">La couleur des yeux du hibou</string>
+    
     <string id="BackgroundColorTitle">Couleur d'arrière plan</string>
     <string id="ForegroundColorTitle">Couleur de premier plan</string>
     <string id="AlertColorTitle">Couleur d'alerte</string>
+    
     <string id="MilitaryFormatTitle">Format militaire pour 24 heures</string>
  
 	<string id="COLOR_WHITE">Blanc</string>
@@ -20,8 +26,6 @@
     <string id="COLOR_BLUE">Bleu</string>
     <string id="COLOR_DK_BLUE">Bleu foncé</string>
     <string id="COLOR_PURPLE">Violet</string>
-    <string id="COLOR_PINK">Rose</string>      
+    <string id="COLOR_PINK">Rose</string> 
     
-    <string id="LogoStringTitle">Texte du logo</string>
-
 </strings>

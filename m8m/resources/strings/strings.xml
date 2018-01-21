@@ -1,10 +1,16 @@
 <strings>
 
     <string id="AppName">m8m</string>
-
+    <string id="LogoStringTitle">Logo text</string>
+    
+    <string id="OwlBackgroundColorTitle">Owl's Face Color</string>
+    <string id="OwlForegroundColorTitle">Owl's Eyes Contour Color</string>
+    <string id="OwlAlertColorTitle">Owl's Eyes Color</string>
+    
     <string id="BackgroundColorTitle">Background Color</string>
     <string id="ForegroundColorTitle">Foreground Color</string>
     <string id="AlertColorTitle">Alert Color</string>
+
     <string id="MilitaryFormatTitle">Military Format for 24 Hour Time</string>
 
 	<string id="COLOR_WHITE">White</string>
@@ -22,6 +28,4 @@
     <string id="COLOR_PURPLE">Purple</string>
     <string id="COLOR_PINK">Pink</string>  
     
-    <string id="LogoStringTitle">Logo text</string>
-
 </strings>
