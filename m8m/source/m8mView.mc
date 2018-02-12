@@ -174,7 +174,13 @@ class m8mView extends Ui.WatchFace {
     }
     
     function updateOwlDynamics(dc){   	
-    	var eyesAreClosed = Sys.getClockTime().min % 2;
+    	var stepsDone = ActivityMonitor.getInfo().steps.toFloat();
+    	var stepsTarget = ActivityMonitor.getInfo().stepGoal;
+    	var stepsPerDeca = stepsDone / stepsTarget * 10;	
+    	
+    	var minutesRange = Sys.getClockTime().min % 10;    	
+    	
+    	var eyesAreClosed = minutesRange > stepsPerDeca;
     	  
     	OwlShapes.drawEyesInPosition(dc, eyesAreClosed, eyeColor, eyeContourColor, faceColor, owlPositionX);
     	dc.drawBitmap(owlPositionX,5,owlShape);
