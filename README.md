@@ -1,7 +1,6 @@
-# garmin-m8m 0.0.6
+# garmin-m8m 0.0.7
 Garmin smart watch application.
-For each 10 minutes the owl has its eyes wide open for as long as the percent activity from the step goal. (i.e. if your activity is 20 percent of the step goal, the owl will stay awake the minutes 0, 1 and 2 in each ten minute decade)
-
+For each 10 minutes, the owl has its eyes wide open for as long as the percent activity from the step goal. (i.e. if your activity is 20 percent of the step goal, the owl will stay awake the minutes 0, 1 and 2 in each ten minute decade)
 
 # Table of Contents
 1. [Presentation](#presentation)
@@ -16,6 +15,7 @@ For each 10 minutes the owl has its eyes wide open for as long as the percent ac
 ## Presentation
 ![even minute](m8m/screenshot/s00.png)
 ![odd minute](m8m/screenshot/s01.png)
+![garmin](m8m/screenshot/s81.png)
 
 ## Features
 * Blinking eyes owl
@@ -68,7 +68,7 @@ The owl eyes contour color
 ### Owl's Eyes Color
 The owl eyes color
 
-### Miltary format for 24 hours
+### Military format for 24 hours
 Available only when the watch is set to output 24-hour time. 
 In this case the double column is removed.
 
