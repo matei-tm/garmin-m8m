@@ -32,16 +32,17 @@ For each 10 minutes, the owl has its eyes wide open for as long as the percent a
 The application should be set up from Garmin IQ application on your phone/tablet. The main steps are as follows:
 
 ### Setting process
-<a href="url"><img src="m8m/screenshot/Screenshot_2018-01-21-02-13-58.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/Screenshot_2018-01-21-02-14-04.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/Screenshot_2018-01-21-02-14-09.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/Screenshot_2018-01-21-02-14-13.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/Screenshot_2018-01-21-02-15-23.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/Screenshot_2018-01-21-02-15-27.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/Screenshot_2018-01-21-02-16-16.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/s-1003-configure.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/s-1004-configure.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/s-1005-configure.png" align="center" height="512" width="288" ></a>
+<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203011.png" align="center" height="512" width="288" ></a>
+<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203027.png" align="center" height="512" width="288" ></a>
+<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203043.png" align="center" height="512" width="288" ></a>
+<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203058.png" align="center" height="512" width="288" ></a>
+<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203134.png" align="center" height="512" width="288" ></a>
+<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203200.png" align="center" height="512" width="288" ></a>
+<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203220.png" align="center" height="512" width="288" ></a>
+<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203230.png" align="center" height="512" width="288" ></a>
+<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203231.png" align="center" height="512" width="288" ></a>
+<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203232.png" align="center" height="512" width="288" ></a>
+<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203233.png" align="center" height="512" width="288" ></a>
 
 ### Logo text
 The three letters customizable logo
