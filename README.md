@@ -1,4 +1,4 @@
-# garmin-m8m 0.0.8
+# garmin-m8m 0.0.9
 Garmin smart watch application.
 For each 10 minutes, the owl has its eyes wide open for as long as the percent activity from the step goal. (i.e. if your activity is 20 percent of the step goal, the owl will stay awake the minutes 0, 1 and 2 in each ten minute decade)
 
