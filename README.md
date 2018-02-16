@@ -168,3 +168,13 @@ The application may be downloaded from the Garmin store.
 ### D2 Bravo Titanium
 ![minute](m8m/screenshot/s37-d2bravotitanium.png)
 ![minute](m8m/screenshot/s38-d2bravotitanium.png)
+### Descent Mk1
+![minute](m8m/screenshot/s39-mk1.png)
+![minute](m8m/screenshot/s40-mk1.png)
+### Forerunner 645
+![minute](m8m/screenshot/s41-fr645.png)
+![minute](m8m/screenshot/s42-fr645.png)
+### Forerunner 645 Music
+![minute](m8m/screenshot/s43-fr645m.png)
+![minute](m8m/screenshot/s44-fr645m.png)
+
