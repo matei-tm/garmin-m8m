@@ -109,6 +109,9 @@ The application may be downloaded from the Garmin store.
 * [D2 Bravo](#d2-bravo)
 * [D2 Bravo Charlie](#d2-bravo-charlie)
 * [D2 Bravo Titanium](#d2-bravo-titanium)
+* [Descent Mk1](#descent-mk1)
+* [Forerunner 645](#forerunner-645)
+* [Forerunner 645 Music](#forerunner-645-music)
 
 ## Screenshots
 ### Vivoactive HR
