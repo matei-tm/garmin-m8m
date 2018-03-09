@@ -29,20 +29,10 @@ For each 10 minutes, the owl has its eyes wide open for as long as the percent a
 * Customizable colors
 
 ## Settings
-The application should be set up from Garmin IQ application on your phone/tablet. The main steps are as follows:
 
-### Setting process
-<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203011.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203027.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203043.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203058.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203134.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203200.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203220.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203230.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203231.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203232.png" align="center" height="512" width="288" ></a>
-<a href="url"><img src="m8m/screenshot/Screenshot_20180216-203233.png" align="center" height="512" width="288" ></a>
+Using mobile app Garmin Connect: [https://github.com/matei-tm/garmin-m8m/wiki/Changing-settings-from-Garmin-Connect-mobile-app](https://github.com/matei-tm/garmin-m8m/wiki/Changing-settings-from-Garmin-Connect-mobile-app)
+
+Using computer app Garmin Express for Windows or Mac: [https://github.com/matei-tm/garmin-m8m/wiki/Changing-settings-from-Garmin-Express-for-Windows-or-Mac](https://github.com/matei-tm/garmin-m8m/wiki/Changing-settings-from-Garmin-Express-for-Windows-or-Mac)
 
 ### Logo text
 The three letters customizable logo
