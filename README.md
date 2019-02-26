@@ -1,6 +1,6 @@
 # garmin-m8m
 
-[https://github.com/matei-tm/garmin-m8m.git](![GitHub release](https://img.shields.io/github/release/matei-tm/garmin-m8m.svg))
+[![GitHub release](https://img.shields.io/github/release/matei-tm/garmin-m8m.svg)](https://github.com/matei-tm/garmin-m8m/releases)
 
 Garmin smart watch application.
 For each 10 minutes, the owl has its eyes wide open for as long as the percent activity from the step goal. (i.e. if your activity is 20 percent of the step goal, the owl will stay awake the minutes 0, 1 and 2 in each ten minute decade)
