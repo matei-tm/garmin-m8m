@@ -1,7 +1,7 @@
 #!/bin/bash
 # travis.sh script for CI integration
 
-SDK_URL="https://developer.garmin.com/downloads/connect-iq/sdks/connectiq-sdk-win-2.4.2.zip"
+SDK_URL="https://developer.garmin.com/downloads/connect-iq/sdks/connectiq-sdk-lin-2.4.2.zip"
 SDK_FILE="sdk.zip"
 SDK_DIR="sdk"
 
@@ -18,10 +18,6 @@ openssl pkcs8 -topk8 -inform PEM -outform DER -in "${PEM_FILE}" -out "${DER_FILE
 
 export MB_HOME="${SDK_DIR}"
 export MB_PRIVATE_KEY="${DER_FILE}"
-
-dos2unix -k sdk/bin/monkeyc
-dos2unix -k sdk/bin/monkeydo
-dos2unix -k sdk/bin/connectiq
 
 chmod +x sdk/bin/monkeyc
 chmod +x sdk/bin/monkeydo
