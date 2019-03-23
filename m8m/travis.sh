@@ -21,4 +21,4 @@ export MB_PRIVATE_KEY="${DER_FILE}"
 
 export
 
-./mb_runner/mb_runner.sh package
+./mb_runner/mb_runner.sh package /home/travis/build/matei-tm/garmin-m8m/m8m/
