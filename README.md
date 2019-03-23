@@ -1,8 +1,13 @@
 # garmin-m8m
 
-[![GitHub release](https://img.shields.io/github/release/matei-tm/garmin-m8m.svg)](https://github.com/matei-tm/garmin-m8m/releases) 
-[![Build Status](https://travis-ci.org/matei-tm/garmin-m8m.svg?branch=master)](https://travis-ci.org/matei-tm/garmin-m8m)
-[![Build Status](https://travis-ci.org/matei-tm/garmin-m8m.svg?branch=develop)](https://travis-ci.org/matei-tm/garmin-m8m)
+[![GitHub release](https://img.shields.io/github/release/matei-tm/garmin-m8m.svg)](https://github.com/matei-tm/garmin-m8m/releases)   
+
+Branch | Status
+:------: | :------:
+master | [![Build Status](https://travis-ci.org/matei-tm/garmin-m8m.svg?branch=master)](https://travis-ci.org/matei-tm/garmin-m8m)
+development | [![Build Status](https://travis-ci.org/matei-tm/garmin-m8m.svg?branch=develop)](https://travis-ci.org/matei-tm/garmin-m8m)
+
+
 
 
 Garmin smart watch application.
