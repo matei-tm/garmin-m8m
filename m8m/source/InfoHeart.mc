@@ -1,5 +1,6 @@
 using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
+using Toybox.ActivityMonitor as Act;
 
 module InfoHeart{
 	function drawRate(dc,x,y,color, max){
@@ -29,15 +30,28 @@ module InfoHeart{
 		for (var i=0; i<= max/10-6; i++)
 		{
 			dc.drawArc(x, y, size + 5*i,    0, angleArray[i][0], angleArray[i][1]);
-			Sys.println("Sample: " + i);   
+			Sys.println("Rate counter: " + i);   
 		}
  	}
 	
-	function drawStatus(dc, color, backColor, alertColor, heartRate, owlPositionX){
+	function drawStatus(dc, foregroundColor, backgroundColor, alertColor, owlPositionX){
         var x = owlPositionX;
         var y = 120;
-
-
-		drawRate(dc,x,y,alertColor, 180);
+        try {
+			var hrIterator = Act.getHeartRateHistory(1, true);
+			var lastSampleTime = null;
+			
+	
+		    var sample = hrIterator.next();
+		    if (null != sample) {
+		        if (sample.heartRate != Act.INVALID_HR_SAMPLE) {
+		                lastSampleTime = sample.when;
+		                Sys.println("Sample: " + sample.heartRate);  
+		                drawRate(dc,x,y,alertColor, sample.heartRate);    // print the current sample
+		        }			
+			}
+		} catch (e instanceof Lang.Exception) {
+    		System.println(e.getErrorMessage());
+		} 
 	}
 }

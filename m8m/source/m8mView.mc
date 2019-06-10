@@ -164,25 +164,13 @@ class m8mView extends Ui.WatchFace {
      		owlPositionX);
     }
     
-    function updateHeartStatus(dc) {
-		var hrIterator = ActivityMonitor.getHeartRateHistory(1, true);
-		var lastSampleTime = null;
-		
-
-	    var sample = hrIterator.next();
-	    if (null != sample) {
-	        if (sample.heartRate != ActivityMonitor.INVALID_HR_SAMPLE) {
-	                lastSampleTime = sample.when;
-	                System.println("Sample: " + sample.heartRate);      // print the current sample
-	        }
+    function updateHeartStatus(dc) {		
 	        InfoHeart.drawStatus(
 		     		dc, 
 		     		foregroundColor,
 		     		backgroundColor, 
 		     		alertColor,
-		     		sample.heartRate,
-		     		owlPositionX);	
-	    }  
+		     		owlPositionX);		   
     }
     
     function updateStepsBar(dc){
