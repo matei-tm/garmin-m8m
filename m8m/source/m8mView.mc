@@ -70,7 +70,8 @@ class m8mView extends Ui.WatchFace {
         
         updateBatteryLevel(dc);       
         updateOwlDynamics(dc);
-        updateBluetoothStatus(dc); 
+        updateBluetoothStatus(dc);
+        updateHeartStatus(dc);
     }
 
     // Called when this View is removed from the screen. Save the
@@ -161,6 +162,27 @@ class m8mView extends Ui.WatchFace {
      		alertColor,
      		settings.phoneConnected,
      		owlPositionX);
+    }
+    
+    function updateHeartStatus(dc) {
+		var hrIterator = ActivityMonitor.getHeartRateHistory(1, true);
+		var lastSampleTime = null;
+		
+
+	    var sample = hrIterator.next();
+	    if (null != sample) {
+	        if (sample.heartRate != ActivityMonitor.INVALID_HR_SAMPLE) {
+	                lastSampleTime = sample.when;
+	                System.println("Sample: " + sample.heartRate);      // print the current sample
+	        }
+	        InfoHeart.drawStatus(
+		     		dc, 
+		     		foregroundColor,
+		     		backgroundColor, 
+		     		alertColor,
+		     		sample.heartRate,
+		     		owlPositionX);	
+	    }  
     }
     
     function updateStepsBar(dc){
