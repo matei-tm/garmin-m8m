@@ -7,68 +7,68 @@ using Toybox.Time.Gregorian;
 using Toybox.ActivityMonitor as Act;
 
 class m8mView extends Ui.WatchFace {
-	hidden var settings;
-	hidden var owlClawsIcon;
-	hidden var owlShape;
+    hidden var settings;
+    hidden var owlClawsIcon;
+    hidden var owlShape;
 
-	hidden var foregroundColor;
-	hidden var backgroundColor;
-	hidden var alertColor;
-	
-	hidden var eyeColor;
-	hidden var eyeContourColor;
-	hidden var faceColor;
-	
-	hidden var customSettings;
-	
-	hidden var owlPositionX;
-	
+    hidden var foregroundColor;
+    hidden var backgroundColor;
+    hidden var alertColor;
+
+    hidden var eyeColor;
+    hidden var eyeContourColor;
+    hidden var faceColor;
+
+    hidden var customSettings;
+
+    hidden var owlPositionX;
+
     function initialize() {
-        WatchFace.initialize(); 
+        WatchFace.initialize();
     }
-    
- 
+
+
     // Load your resources here
     function onLayout(dc) {
         setLayout(Rez.Layouts.WatchFace(dc));
-        settings = System.getDeviceSettings(); 
-        customSettings = new FactoryFormCustomiser.Setter(settings);    
+        settings = System.getDeviceSettings();
+        customSettings = new FactoryFormCustomiser.Setter(settings);
     }
 
     // Called when this View is brought to the foreground. Restore
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() {
-    	owlShape = Ui.loadResource(Rez.Drawables.LogoImageOwl);
-    	owlClawsIcon = Ui.loadResource(Rez.Drawables.LogoImageClaws);
-    	var owlView = View.findDrawableById("LogoImage");
+        owlShape = Ui.loadResource(Rez.Drawables.LogoImageOwl);
+        owlClawsIcon = Ui.loadResource(Rez.Drawables.LogoImageClaws);
+        var owlView = View.findDrawableById("LogoImage");
         owlPositionX = owlView.locX;
     }
-    
+
     function readColorSettings(){
         foregroundColor = App.getApp().getProperty("ForegroundColor");
-    	backgroundColor = App.getApp().getProperty("BackgroundColor");
-    	alertColor = App.getApp().getProperty("AlertColor");
-    	
+        backgroundColor = App.getApp().getProperty("BackgroundColor");
+        alertColor = App.getApp().getProperty("AlertColor");
+
         eyeContourColor = App.getApp().getProperty("OwlForegroundColor");
-    	faceColor = App.getApp().getProperty("OwlBackgroundColor");
-    	eyeColor = App.getApp().getProperty("OwlAlertColor");
-   	}
+        faceColor = App.getApp().getProperty("OwlBackgroundColor");
+        eyeColor = App.getApp().getProperty("OwlAlertColor");
+    }
 
     // Update the view
-    function onUpdate(dc) { 
-		readColorSettings();
-    
-		showTimeLabel();
-		showLogoLabel();
-		showBattery(dc);
+    function onUpdate(dc) {
+        readColorSettings();
+
+        showTimeLabel();
+        showLogoLabel();
+        showBattery(dc);
         showDate();
         showSteps();
-        
+
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
-        
-        updateBatteryLevel(dc);       
+
+        updateBatteryLevel(dc);
         updateOwlDynamics(dc);
         updateBluetoothStatus(dc);
         updateHeartStatus(dc);
@@ -87,36 +87,36 @@ class m8mView extends Ui.WatchFace {
     // Terminate any active timers and prepare for slow updates.
     function onEnterSleep() {
     }
-    
-    function showSteps() {   
-    	var activityInfo = Act.getInfo();
-    	var dataString = activityInfo.steps.toString();
 
-    	setForegroundColorAndContentOnDrawable("StepsLabel", dataString);
+    function showSteps() {
+        var activityInfo = Act.getInfo();
+        var dataString = activityInfo.steps.toString();
+
+        setForegroundColorAndContentOnDrawable("StepsLabel", dataString);
     }
-    
+
     function showBattery(dc) {
-    	var dataString = (System.getSystemStats().battery + 0.5).toNumber().toString() + "%";
-    	
-    	
-		setForegroundColorAndContentOnDrawable("BatteryLabel", dataString);
+        var dataString = (System.getSystemStats().battery + 0.5).toNumber().toString() + "%";
+
+
+        setForegroundColorAndContentOnDrawable("BatteryLabel", dataString);
     }
-    
+
     function showDate() {
-		var info = Gregorian.info(Time.now(), Time.FORMAT_LONG);
+        var info = Gregorian.info(Time.now(), Time.FORMAT_LONG);
         var dateString = Lang.format("$1$ $2$ $3$", [info.day_of_week, info.month, info.day]);
 
         // Update the view
         setForegroundColorAndContentOnDrawable("DateLabel", dateString);
     }
 
-	function showLogoLabel() {
-		var logoString = App.getApp().getProperty("LogoString");
-		setForegroundColorAndContentOnDrawable("LogoLabel", logoString);
- 	}
-	
-	function showTimeLabel() {
-	    // Get the current time and format it correctly
+    function showLogoLabel() {
+        var logoString = App.getApp().getProperty("LogoString");
+        setForegroundColorAndContentOnDrawable("LogoLabel", logoString);
+    }
+
+    function showTimeLabel() {
+        // Get the current time and format it correctly
         var timeFormat = "$1$:$2$";
         var clockTime = Sys.getClockTime();
         var hours = clockTime.hour;
@@ -133,68 +133,70 @@ class m8mView extends Ui.WatchFace {
         var timeString = Lang.format(timeFormat, [hours, clockTime.min.format("%02d")]);
 
         setForegroundColorAndContentOnDrawable("TimeLabel", timeString);
-	}
-	
-	function setForegroundColorAndContentOnDrawable(drawableId, content)
-	{
-	    var view = View.findDrawableById(drawableId);	    
-        view.setColor(foregroundColor);
-        view.setText(content);   
-	}	
+    }
 
-	function updateBatteryLevel(dc) {
-        var batteryLevel = System.getSystemStats().battery;     
+    function setForegroundColorAndContentOnDrawable(drawableId, content)
+    {
+        var view = View.findDrawableById(drawableId);
+        view.setColor(foregroundColor);
+        view.setText(content);
+    }
+
+    function updateBatteryLevel(dc) {
+        var batteryLevel = System.getSystemStats().battery;
 
         InfoBattery.drawLevel(
-        	dc, 
-        	batteryLevel, 
-        	foregroundColor, 
-        	alertColor, 
-        	customSettings.batteryX,
-        	customSettings.batteryY);
+            dc,
+            batteryLevel,
+            foregroundColor,
+            alertColor,
+            customSettings.batteryX,
+            customSettings.batteryY);
     }
-    
+
     function updateBluetoothStatus(dc) {
-     	InfoBluetooth.drawIconByConnectedState(
-     		dc, 
-     		foregroundColor,
-     		backgroundColor, 
-     		alertColor,
-     		settings.phoneConnected,
-     		owlPositionX);
+        InfoBluetooth.drawIconByConnectedState(
+            dc,
+            foregroundColor,
+            backgroundColor,
+            alertColor,
+            settings.phoneConnected,
+            owlPositionX);
     }
-    
-    function updateHeartStatus(dc) {		
-	        InfoHeart.drawStatus(
-		     		dc, 
-		     		foregroundColor,
-		     		backgroundColor, 
-		     		alertColor,
-		     		owlPositionX);		   
+
+    function updateHeartStatus(dc) {
+            var hr = InfoHeart.drawStatus(
+                    dc,
+                    foregroundColor,
+                    backgroundColor,
+                    alertColor,
+                    owlPositionX);
+
+             setForegroundColorAndContentOnDrawable("HrLabel", hr.format("%d"));
     }
-    
+
     function updateStepsBar(dc){
-    	var barColor = foregroundColor;
+        var barColor = foregroundColor;
         InfoSteps.drawBarStep(
-	        dc,
-	        ActivityMonitor.getInfo().steps,
-	        ActivityMonitor.getInfo().stepGoal,
-	        alertColor,
-	        barColor);
+            dc,
+            ActivityMonitor.getInfo().steps,
+            ActivityMonitor.getInfo().stepGoal,
+            alertColor,
+            barColor);
     }
-    
-    function updateOwlDynamics(dc){   	
-    	var stepsDone = ActivityMonitor.getInfo().steps.toFloat();
-    	var stepsTarget = ActivityMonitor.getInfo().stepGoal;
-    	var stepsPerDeca = stepsDone / stepsTarget * 10;	
-    	
-    	var minutesRange = Sys.getClockTime().min % 10;    	
-    	
-    	var eyesAreClosed = minutesRange > stepsPerDeca;
-    	  
-    	OwlShapes.drawEyesInPosition(dc, eyesAreClosed, eyeColor, eyeContourColor, faceColor, owlPositionX);
-    	dc.drawBitmap(owlPositionX,5,owlShape);
-    	updateStepsBar(dc);
-    	dc.drawBitmap(owlPositionX,5,owlClawsIcon);  
+
+    function updateOwlDynamics(dc){
+        var stepsDone = ActivityMonitor.getInfo().steps.toFloat();
+        var stepsTarget = ActivityMonitor.getInfo().stepGoal;
+        var stepsPerDeca = stepsDone / stepsTarget * 10;
+
+        var minutesRange = Sys.getClockTime().min % 10;
+
+        var eyesAreClosed = minutesRange > stepsPerDeca;
+
+        OwlShapes.drawEyesInPosition(dc, eyesAreClosed, eyeColor, eyeContourColor, faceColor, owlPositionX);
+        dc.drawBitmap(owlPositionX,5,owlShape);
+        updateStepsBar(dc);
+        dc.drawBitmap(owlPositionX,5,owlClawsIcon);
     }
 }
