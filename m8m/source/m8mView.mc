@@ -9,21 +9,17 @@ using Toybox.ActivityMonitor as Act;
 class M8mView extends Ui.WatchFace {
     hidden var settings;
     hidden var owlClawsIcon;
-    hidden var owlShape;
 
     hidden var foregroundColor;
     hidden var backgroundColor;
     hidden var alertColor;
-
-    hidden var eyeColor;
-    hidden var eyeContourColor;
-    hidden var faceColor;
 
     hidden var customSettings;
 
     hidden var owlPositionX;
 
     hidden var infoHeart;
+    hidden var owlShapes;
 
     function initialize() {
         WatchFace.initialize();
@@ -36,14 +32,13 @@ class M8mView extends Ui.WatchFace {
         settings = System.getDeviceSettings();
         customSettings = new FactoryFormCustomiser.Setter(settings);
         infoHeart = View.findDrawableById("InfoHeart");
-
+        owlShapes = View.findDrawableById("OwlShapes");
     }
 
     // Called when this View is brought to the foreground. Restore
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() {
-        owlShape = Ui.loadResource(Rez.Drawables.LogoImageOwl);
         owlClawsIcon = Ui.loadResource(Rez.Drawables.LogoImageClaws);
         var owlView = View.findDrawableById("LogoImage");
         owlPositionX = owlView.locX;
@@ -54,9 +49,7 @@ class M8mView extends Ui.WatchFace {
         backgroundColor = App.getApp().getProperty("BackgroundColor");
         alertColor = App.getApp().getProperty("AlertColor");
 
-        eyeContourColor = App.getApp().getProperty("OwlForegroundColor");
-        faceColor = App.getApp().getProperty("OwlBackgroundColor");
-        eyeColor = App.getApp().getProperty("OwlAlertColor");
+
     }
 
     // Update the view
@@ -73,22 +66,22 @@ class M8mView extends Ui.WatchFace {
             dc.clearClip();
         }
 
-       updateBatteryLevel(dc);
-       updateOwlDynamics(dc);
-       updateBluetoothStatus(dc);
-
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
 
-
+       updateBatteryLevel(dc);
+       updateOwlDynamics(dc);
+       updateBluetoothStatus(dc);
     }
 
     function onPartialUpdate(dc) {
         infoHeart.update(dc, true);
+        //owlShapes.update(ds, false);
     }
 
     function onSettingsChanged() {
        infoHeart.onSettingsChanged();
+       owlShapes.onSettingsChanged();
     }
 
     // Called when this View is removed from the screen. Save the
@@ -192,16 +185,6 @@ class M8mView extends Ui.WatchFace {
     }
 
     function updateOwlDynamics(dc){
-        var stepsDone = ActivityMonitor.getInfo().steps.toFloat();
-        var stepsTarget = ActivityMonitor.getInfo().stepGoal;
-        var stepsPerDeca = stepsDone / stepsTarget * 10;
-
-        var minutesRange = Sys.getClockTime().min % 10;
-
-        var eyesAreClosed = minutesRange > stepsPerDeca;
-
-        OwlShapes.drawEyesInPosition(dc, eyesAreClosed, eyeColor, eyeContourColor, faceColor, owlPositionX);
-        dc.drawBitmap(owlPositionX,5,owlShape);
         updateStepsBar(dc);
         dc.drawBitmap(owlPositionX,5,owlClawsIcon);
     }

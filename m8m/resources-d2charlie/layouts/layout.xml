@@ -13,7 +13,7 @@
   justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
  <label id="StepsLabel" x="210" y="100" font="Gfx.FONT_XTINY"
   justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_RED" />
- <drawable id="InfoHeart" class="InfoHeart">
+ <drawable id="OwlShapes" class="OwlShapes"></drawable><drawable id="InfoHeart" class="InfoHeart">
   <param name="left">81</param>
   <param name="right">161</param>
   <param name="top">25</param>
