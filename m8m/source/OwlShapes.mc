@@ -19,6 +19,7 @@ class OwlShapes extends Ui.Drawable {
     var eyeContourColor;
     var faceColor;
 
+
     function initialize(params) {
 
         Drawable.initialize(params);

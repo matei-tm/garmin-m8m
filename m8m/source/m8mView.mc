@@ -18,7 +18,7 @@ class M8mView extends Ui.WatchFace {
 
     hidden var owlPositionX;
 
-    hidden var infoHeart;
+    hidden var activeWings;
     hidden var owlShapes;
 
     function initialize() {
@@ -31,7 +31,7 @@ class M8mView extends Ui.WatchFace {
         setLayout(Rez.Layouts.WatchFace(dc));
         settings = System.getDeviceSettings();
         customSettings = new FactoryFormCustomiser.Setter(settings);
-        infoHeart = View.findDrawableById("InfoHeart");
+        activeWings = View.findDrawableById("ActiveWings");
         owlShapes = View.findDrawableById("OwlShapes");
     }
 
@@ -48,8 +48,6 @@ class M8mView extends Ui.WatchFace {
         foregroundColor = App.getApp().getProperty("ForegroundColor");
         backgroundColor = App.getApp().getProperty("BackgroundColor");
         alertColor = App.getApp().getProperty("AlertColor");
-
-
     }
 
     // Update the view
@@ -75,12 +73,12 @@ class M8mView extends Ui.WatchFace {
     }
 
     function onPartialUpdate(dc) {
-        infoHeart.update(dc, true);
+        activeWings.update(dc, true);
         //owlShapes.update(ds, false);
     }
 
     function onSettingsChanged() {
-       infoHeart.onSettingsChanged();
+       activeWings.onSettingsChanged();
        owlShapes.onSettingsChanged();
     }
 

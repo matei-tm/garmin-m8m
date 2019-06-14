@@ -121,4 +121,14 @@
         <settingConfig type="boolean" />
     </setting>
 
+    <setting propertyKey="@Properties.ShowActiveWings" title="@Strings.ShowActiveWingsTitle">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.ShowOnWings" title="@Strings.ShowOnWingsTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.DECORATIVE_ON_WINGS</listEntry>
+            <listEntry value="1">@Strings.FLOORS_ON_WINGS</listEntry>
+            <listEntry value="2">@Strings.HEARTRATE_ON_WINGS</listEntry>
+        </settingConfig>
+    </setting>
 </settings>
