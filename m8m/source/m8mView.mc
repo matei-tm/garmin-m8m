@@ -6,7 +6,7 @@ using Toybox.Application as App;
 using Toybox.Time.Gregorian;
 using Toybox.ActivityMonitor as Act;
 
-class m8mView extends Ui.WatchFace {
+class M8mView extends Ui.WatchFace {
     hidden var settings;
     hidden var owlClawsIcon;
     hidden var owlShape;
@@ -23,6 +23,8 @@ class m8mView extends Ui.WatchFace {
 
     hidden var owlPositionX;
 
+    hidden var infoHeart;
+
     function initialize() {
         WatchFace.initialize();
     }
@@ -33,6 +35,8 @@ class m8mView extends Ui.WatchFace {
         setLayout(Rez.Layouts.WatchFace(dc));
         settings = System.getDeviceSettings();
         customSettings = new FactoryFormCustomiser.Setter(settings);
+        infoHeart = View.findDrawableById("InfoHeart");
+
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -57,21 +61,34 @@ class m8mView extends Ui.WatchFace {
 
     // Update the view
     function onUpdate(dc) {
-        readColorSettings();
+       readColorSettings();
 
-        showTimeLabel();
-        showLogoLabel();
-        showBattery(dc);
-        showDate();
-        showSteps();
+       showTimeLabel();
+       showLogoLabel();
+       showBattery(dc);
+       showDate();
+       showSteps();
+
+        if (dc has :clearClip) {
+            dc.clearClip();
+        }
+
+       updateBatteryLevel(dc);
+       updateOwlDynamics(dc);
+       updateBluetoothStatus(dc);
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
 
-        updateBatteryLevel(dc);
-        updateOwlDynamics(dc);
-        updateBluetoothStatus(dc);
-        updateHeartStatus(dc);
+
+    }
+
+    function onPartialUpdate(dc) {
+        infoHeart.update(dc, true);
+    }
+
+    function onSettingsChanged() {
+       infoHeart.onSettingsChanged();
     }
 
     // Called when this View is removed from the screen. Save the
@@ -162,17 +179,6 @@ class m8mView extends Ui.WatchFace {
             alertColor,
             settings.phoneConnected,
             owlPositionX);
-    }
-
-    function updateHeartStatus(dc) {
-            var hr = InfoHeart.drawStatus(
-                    dc,
-                    foregroundColor,
-                    backgroundColor,
-                    alertColor,
-                    owlPositionX);
-
-             setForegroundColorAndContentOnDrawable("HrLabel", hr.format("%d"));
     }
 
     function updateStepsBar(dc){

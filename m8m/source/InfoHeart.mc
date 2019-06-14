@@ -2,16 +2,50 @@ using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
 using Toybox.Activity as Activity;
 using Toybox.ActivityMonitor as ActivityMonitor;
+using Toybox.WatchUi as Ui;
+using Toybox.Application as App;
+
+class InfoHeart extends Ui.Drawable {
+    private var mLeft;
+    private var mRight;
+    private var mTop;
+    private var mBottom;
+    private var owlPositionX;
+
+    function initialize(params) {
+
+        Drawable.initialize(params);
+
+        mLeft = params[:left];
+        mRight = params[:right];
+        mTop = params[:top];
+        mBottom = params[:bottom];
 
 
-module InfoHeart{
-    function drawRate(dc,x,y,color, max){
+        //onSettingsChanged();
+    }
+
+    function draw(dc) {
+        var owlView = App.getApp().getView().findDrawableById("LogoImage");
+        owlPositionX = owlView.locX;
+        update(dc, false);
+    }
+
+    function update(dc, isPartialUpdate) {
+        if (isPartialUpdate) {
+            return;
+        }
+
+        drawStatus(dc);
+    }
+
+    function drawRate(dc,x,y,max){
         var startRate = 60;
         var size = 2;
         var width = 3;
 
-        //dc.setPenWidth(width);
-        //dc.setColor(color, Gfx.COLOR_TRANSPARENT);
+        dc.setPenWidth(width);
+        dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
 
         var angleArrayLeftWing = [
             [65, 85],//60
@@ -45,6 +79,7 @@ module InfoHeart{
             [91, 97]//180
         ];
 
+        dc.drawLine(0, 0, 250, 150);
         for (var i=0; i<= max/10-6; i++)
         {
             dc.drawArc(x, y, size + 5*i,    0, angleArrayLeftWing[i][0],  angleArrayLeftWing[i][1]);
@@ -53,7 +88,7 @@ module InfoHeart{
         }
     }
 
-    function drawStatus(dc, foregroundColor, backgroundColor, alertColor, owlPositionX){
+    function drawStatus(dc){
         var x = owlPositionX;
         var y = 120;
         var value = 0;
@@ -74,8 +109,8 @@ module InfoHeart{
                 }
             }
 
-            drawRate(dc,x,y,alertColor, value);
-
+            drawRate(dc,x,y, value);
+            System.println(value.toString());
         } catch (e instanceof Lang.Exception) {
             System.println(e.getErrorMessage());
         }

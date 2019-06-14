@@ -3,6 +3,8 @@ using Toybox.WatchUi as Ui;
 
 class m8mApp extends App.AppBase {
 
+    var mView;
+
     function initialize() {
         AppBase.initialize();
     }
@@ -17,11 +19,17 @@ class m8mApp extends App.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() {
-        return [ new m8mView() ];
+        mView = new M8mView();
+        return [ mView ];
+    }
+
+    function getView() {
+        return mView;
     }
 
     // New app settings have been received so trigger a UI update
     function onSettingsChanged() {
+        mView.onSettingsChanged();
         Ui.requestUpdate();
     }
 

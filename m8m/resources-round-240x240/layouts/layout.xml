@@ -1,10 +1,24 @@
 <layout id="WatchFace">
-    <drawable class="Background" />
-    <bitmap id="LogoImage" x="65" y="5" filename="../../resources/images/owl-msm.png" />
-    <label id="TimeLabel" x="center" y="115" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />    
-    <label id="LogoLabel" x="200" y="65" font="Gfx.FONT_LARGE" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_WHITE" />
-    <label id="BatteryLabel" x="180" y="30" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_WHITE" />
-    <label id="DateLabel" x="center" y="190" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
-   	<label id="StepsLabel" x="210" y="94" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_RED" />
-   	<label id="HrLabel" x="20" y="104" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_RED" />
+ <drawable class="Background" />
+ <bitmap id="LogoImage" x="65" y="5"
+  filename="../../resources/images/owl-msm.png" />
+ <label id="TimeLabel" x="center" y="115"
+  font="Gfx.FONT_NUMBER_THAI_HOT"
+  justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
+ <label id="LogoLabel" x="200" y="65" font="Gfx.FONT_LARGE"
+  justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_WHITE" />
+ <label id="BatteryLabel" x="180" y="30" font="Gfx.FONT_XTINY"
+  justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_WHITE" />
+ <label id="DateLabel" x="center" y="190" font="Gfx.FONT_XTINY"
+  justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
+ <label id="StepsLabel" x="210" y="94" font="Gfx.FONT_XTINY"
+  justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_RED" />
+ <drawable id="InfoHeart" class="InfoHeart">
+  <param name="left">81</param>
+  <param name="right">161</param>
+  <param name="top">25</param>
+  <param name="bottom">44</param>
+ </drawable>
+ <label id="HrLabel" x="20" y="104" font="Gfx.FONT_TINY"
+  justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_RED" />
 </layout>
