@@ -59,57 +59,58 @@ class ActiveWings extends Ui.Drawable {
     drawStatus(dc);
   }
 
-  function drawWings(dc, x, y, max) {
-    var startRate = 60;
-    var size = 2;
-    var width = 3;
+  function drawWings(dc, x, y, fillingLevel, needDoubleFace) {
+    System.println(fillingLevel);
+    System.println(needDoubleFace);
+    var startRadius = 3;
+    var featherTraceWidth = 3;
+    var featherGap = 6;
 
-    dc.setPenWidth(width);
-
+    dc.setPenWidth(featherTraceWidth);
 
     var angleArrayLeftWing = [
-      [65, 85], //60
-      [65, 85], //70
-      [65, 85], //80
-      [65, 85], //90
-      [65, 88], //100
-      [65, 90], //110
-      [65, 90], //120
-      [65, 90], //130
-      [62, 90], //140
-      [60, 90], //150
-      [60, 89], //160
-      [60, 88], //170
-      [60, 85] //180
+      [65, 85], //00-60
+      [66, 85], //01-70
+      [66, 85], //02-80
+      [70, 85], //03-90
+      [66, 88], //03-100
+      [63, 90], //05-110
+      [62, 90], //06-120
+      [61, 89], //07-130
+      [60, 89], //08-140
+      [60, 88], //09-150
+      [60, 87], //10-160
     ];
 
     var angleArrayRightWing = [
-      [0, 0], //60
-      [0, 0], //70
-      [0, 0], //80
-      [0, 0], //90
-      [0, 0], //100
-      [0, 0], //110
-      [0, 0], //120
-      [90, 92], //130
-      [90, 92], //140
-      [90, 94], //150
-      [91, 95], //160
-      [91, 96], //170
-      [91, 97] //180
+      [0, 0],   //00-60
+      [0, 0],   //01-70
+      [0, 0],   //02-80
+      [0, 0],   //03-90
+      [0, 0],   //04-100
+      [0, 0],   //05-110
+      [0, 0],   //06-120
+      [90, 92], //07-130
+      [90, 92], //08-140
+      [90, 94], //09-150
+      [91, 95], //10-160
     ];
 
-    for (var i = 0; i <= 12; i++) {
-      if (i <= max / 10 - 6) {
+    for (var i = 0; i <= 9; i++) {
+      if (fillingLevel > 0 && i <= fillingLevel) {
         dc.setColor(owlAlertColor, Gfx.COLOR_TRANSPARENT);
       } else {
-        dc.setColor(owlForegroundColor, Gfx.COLOR_TRANSPARENT);
+
+        if (needDoubleFace)
+        {dc.setColor(owlBackgroundColor, Gfx.COLOR_TRANSPARENT);}
+        else
+        {dc.setColor(owlForegroundColor, Gfx.COLOR_TRANSPARENT);}
       }
 
-      dc.drawArc(x, y, size + 5 * i, 0, angleArrayLeftWing[i][0], angleArrayLeftWing[i][1]);
+      dc.drawArc(x, y, startRadius + featherGap * i, 0, angleArrayLeftWing[i][0], angleArrayLeftWing[i][1]);
 
       if (i > 6) {
-        dc.drawArc(x + 68, y + 5, size + 5 * i, 0, angleArrayRightWing[i][0], angleArrayRightWing[i][1]);
+        dc.drawArc(x + 68, y + 5, startRadius + featherGap * i, 0, angleArrayRightWing[i][0], angleArrayRightWing[i][1]);
       }
     }
   }
@@ -120,33 +121,36 @@ class ActiveWings extends Ui.Drawable {
 
     try {
       var value = 0;
+      var needDoubleFace = false;
       switch (showOnWings) {
         case DECORATIVE_ON_WINGS:
-          value = 0;
           break;
         case FLOORS_ON_WINGS:
-          value = getFloorsPercentValue();
+          value = getFloorsPertenValue();
           break;
         case HEARTRATE_ON_WINGS:
           value = getHeartRateValue();
+          if (value > 10) {
+            value = value /2 ;
+            needDoubleFace = true;}
           break;
       }
 
-      drawWings(dc, x, y, value);
+      drawWings(dc, x, y, value, needDoubleFace);
     } catch (e instanceof Lang.Exception) {
       System.println(e.getErrorMessage());
     }
   }
 
   function getHeartRateValue() {
-    // we will handle values from 0 to 200
+
     var value = 0;
     var activityInfo = Activity.getActivityInfo();
     var sample = activityInfo.currentHeartRate;
 
     if (sample != null) {
       value = sample;
-    } else if (ActivityMonitor has: getHeartRateHistory) {
+    } else if (ActivityMonitor has :getHeartRateHistory) {
       sample = ActivityMonitor.getHeartRateHistory(1, true).next();
 
       if ((sample != null) && (sample.heartRate != ActivityMonitor.INVALID_HR_SAMPLE)) {
@@ -154,21 +158,23 @@ class ActiveWings extends Ui.Drawable {
       }
     }
 
-    return value;
+    // value are from 0 to 200
+    // we divide it bey ten because  we expect values from 0 to 20;
+    return value / 10; //
   }
 
-  function getFloorsPercentValue() {
+  function getFloorsPertenValue() {
     var value = 0;
-    var sample;
+    var info;
 
-    if (ActivityMonitor has: getInfo) {
-      sample = ActivityMonitor.getInfo();
+    if (ActivityMonitor has :getInfo) {
+      info = ActivityMonitor.getInfo();
 
-      if ((sample != null) && (sample.floorsClimbedGoal > 0)) {
-        value = sample.floorsClimbed / sample.floorsClimbedGoal * 100;
+      if ((info != null && info has :floorsClimbed) && (info.floorsClimbedGoal > 0)) {
+        value = info.floorsClimbed / info.floorsClimbedGoal * 10;// a range from 0 to 10
       }
     }
-System.println(value);
+
     return value;
   }
 }
