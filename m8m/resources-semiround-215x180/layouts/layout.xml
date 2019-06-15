@@ -13,11 +13,8 @@
   justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_WHITE" />
  <label id="StepsLabel" x="200" y="104" font="Gfx.FONT_TINY"
   justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_RED" />
- <drawable id="OwlShapes" class="OwlShapes"></drawable><drawable id="ActiveWings" class="ActiveWings">
-  <param name="left">81</param>
-  <param name="right">161</param>
-  <param name="top">25</param>
-  <param name="bottom">44</param>
+ <drawable id="OwlShapes" class="OwlShapes"></drawable>
+ <drawable id="ActiveWings" class="ActiveWings">
  </drawable>
  <label id="HrLabel" x="20" y="104" font="Gfx.FONT_TINY"
   justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_RED" />

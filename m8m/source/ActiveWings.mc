@@ -30,11 +30,6 @@ class ActiveWings extends Ui.Drawable {
 
     Drawable.initialize(params);
 
-    mLeft = params[: left];
-    mRight = params[: right];
-    mTop = params[: top];
-    mBottom = params[: bottom];
-
     onSettingsChanged();
   }
 
