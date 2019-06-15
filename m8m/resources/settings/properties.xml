@@ -8,6 +8,5 @@
     <property id="OwlForegroundColor" type="number">0x000000</property>
     <property id="OwlAlertColor" type="number">0xFF0000</property>
     <property id="UseMilitaryFormat" type="boolean">false</property>
-    <property id="ShowActiveWings" type="boolean">true</property>
     <property id="ShowOnWings" type="number">0</property>    
 </properties>

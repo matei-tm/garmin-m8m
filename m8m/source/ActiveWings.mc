@@ -6,7 +6,9 @@ using Toybox.WatchUi as Ui;
 using Toybox.Application as App;
 
 enum {
-  DECORATIVE_ON_WINGS = 0,
+  NOTHING = 0,
+  DECORATIVE_ON_WINGS_01,
+  DECORATIVE_ON_WINGS_02,
   FLOORS_ON_WINGS,
   HEARTRATE_ON_WINGS
 }
@@ -41,8 +43,8 @@ class ActiveWings extends Ui.Drawable {
     owlBackgroundColor = App.getApp().getProperty("OwlBackgroundColor");
     owlAlertColor = App.getApp().getProperty("OwlAlertColor");
 
-    showActiveWings = App.getApp().getProperty("ShowActiveWings");
     showOnWings = App.getApp().getProperty("ShowOnWings");
+    showActiveWings = showOnWings != 0;
   }
 
   function draw(dc) {
@@ -52,7 +54,7 @@ class ActiveWings extends Ui.Drawable {
   }
 
   function update(dc, isPartialUpdate) {
-    if (isPartialUpdate) {
+    if (isPartialUpdate || !showActiveWings) {
       return;
     }
 
@@ -70,8 +72,8 @@ class ActiveWings extends Ui.Drawable {
 
     var angleArrayLeftWing = [
       [65, 85], //00-60
-      [66, 85], //01-70
-      [66, 85], //02-80
+      [67, 85], //01-70
+      [67, 85], //02-80
       [70, 85], //03-90
       [66, 88], //03-100
       [63, 90], //05-110
@@ -123,7 +125,10 @@ class ActiveWings extends Ui.Drawable {
       var value = 0;
       var needDoubleFace = false;
       switch (showOnWings) {
-        case DECORATIVE_ON_WINGS:
+        case DECORATIVE_ON_WINGS_01:
+          break;
+        case DECORATIVE_ON_WINGS_02:
+          needDoubleFace = true;
           break;
         case FLOORS_ON_WINGS:
           value = getFloorsPertenValue();
@@ -131,7 +136,7 @@ class ActiveWings extends Ui.Drawable {
         case HEARTRATE_ON_WINGS:
           value = getHeartRateValue();
           if (value > 10) {
-            value = value /2 ;
+            value = value - 10 ;
             needDoubleFace = true;}
           break;
       }
@@ -158,8 +163,9 @@ class ActiveWings extends Ui.Drawable {
       }
     }
 
+    System.println(value);
     // value are from 0 to 200
-    // we divide it bey ten because  we expect values from 0 to 20;
+    // we divide it by ten because  we expect values from 0 to 20;
     return value / 10; //
   }
 

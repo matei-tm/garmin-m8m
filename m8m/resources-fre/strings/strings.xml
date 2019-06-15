@@ -12,12 +12,13 @@
     <string id="AlertColorTitle">Couleur d'alerte</string>
     
     <string id="MilitaryFormatTitle">Format militaire pour 24 heures</string>
-    <string id="ShowActiveWingsTitle">Active Wings</string>
-    <string id="ShowOnWingsTitle">Show on wings</string> 
-    
-    <string id="FLOORS_ON_WINGS">Floors goal %</string>
-    <string id="HEARTRATE_ON_WINGS">Heart rate</string>
-    <string id="DECORATIVE_ON_WINGS">Decorative</string>
+
+    <string id="ShowOnWingsTitle">Indication des ailes</string> 
+    <string id="NOTHING">Rien</string>
+    <string id="FLOORS_ON_WINGS">Objectif de sol %</string>
+    <string id="HEARTRATE_ON_WINGS">Rythme cardiaque</string>
+    <string id="DECORATIVE_ON_WINGS_01">Décoratives 1</string>
+    <string id="DECORATIVE_ON_WINGS_02">Décoratives 2</string>    
 
 	<string id="COLOR_WHITE">Blanc</string>
     <string id="COLOR_LT_GRAY">Gris clair</string>
