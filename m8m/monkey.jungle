@@ -1,2 +1,8 @@
 project.manifest = manifest.xml
 
+d2delta.resourcePath = $(d2charlie.resourcePath)
+d2deltapx.resourcePath = $(d2charlie.resourcePath)
+d2deltas.resourcePath = $(d2charlie.resourcePath)
+fenix5plus.resourcePath = $(fenix5.resourcePath)
+fenix5splus.resourcePath = $(fenix5s.resourcePath)
+fenix5xplus.resourcePath = $(fenix5x.resourcePath)
