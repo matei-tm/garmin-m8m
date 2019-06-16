@@ -1,5 +1,6 @@
 project.manifest = manifest.xml
-
+#fix autobuild source path
+base.sourcePath=source
 d2delta.resourcePath = $(d2charlie.resourcePath)
 d2deltapx.resourcePath = $(d2charlie.resourcePath)
 d2deltas.resourcePath = $(d2charlie.resourcePath)
