@@ -1,20 +1,21 @@
 <layout id="WatchFace">
  <drawable class="Background" />
- <bitmap id="LogoImage" x="110" y="5"
+ <bitmap id="LogoImage" x="125" y="5"
   filename="../../resources/images/owl-msm.png" />
  <label id="TimeLabel" x="center" y="115"
   font="Gfx.FONT_NUMBER_THAI_HOT"
   justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
  <label id="LogoLabel" x="center" y="270" font="Gfx.FONT_LARGE"
   justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
- <label id="BatteryLabel" x="260" y="20" font="Gfx.FONT_TINY"
+ <label id="BatteryLabel" x="280" y="20" font="Gfx.FONT_TINY"
   justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_WHITE" />
  <label id="DateLabel" x="center" y="240" font="Gfx.FONT_TINY"
   justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
- <label id="StepsLabel" x="320" y="90" font="Gfx.FONT_TINY"
+ <label id="StepsLabel" x="340" y="85" font="Gfx.FONT_TINY"
   justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_RED" />
  <drawable id="OwlShapes" class="OwlShapes"></drawable><drawable id="ActiveWings" class="ActiveWings">
- </drawable>
+
+ </drawable>
  <label id="HrLabel" x="20" y="104" font="Gfx.FONT_TINY"
   justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_RED" />
 </layout>

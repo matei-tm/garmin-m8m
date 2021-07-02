@@ -48,6 +48,27 @@ module FactoryFormCustomiser
                 return;
             }
 
+            if (width == 360 && height == 360 && shape == 1)
+            {
+                batteryX = 220;
+                batteryY = 15;
+                return;
+            }
+
+            if (width == 390 && height == 390 && shape == 1)
+            {
+                batteryX = 230;
+                batteryY = 15;
+                return;
+            }
+
+            if (width == 416 && height == 416 && shape == 1)
+            {
+                batteryX = 240;
+                batteryY = 15;
+                return;
+            }
+
             if (width == 215 && height == 180 && shape == 2)
             {
                 batteryX = 128;
