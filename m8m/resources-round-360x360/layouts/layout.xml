@@ -9,9 +9,9 @@
   justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_WHITE" />
  <label id="BatteryLabel" x="220" y="30" font="Gfx.FONT_TINY"
   justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_WHITE" />
- <label id="DateLabel" x="center" y="220" font="Gfx.FONT_TINY"
+ <label id="DateLabel" x="center" y="240" font="Gfx.FONT_TINY"
   justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
- <label id="StepsLabel" x="260" y="94" font="Gfx.FONT_TINY"
+ <label id="StepsLabel" x="320" y="90" font="Gfx.FONT_TINY"
   justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_RED" />
  <drawable id="OwlShapes" class="OwlShapes"></drawable><drawable id="ActiveWings" class="ActiveWings">
  </drawable>
