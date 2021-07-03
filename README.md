@@ -2,10 +2,6 @@
 
 [![GitHub release](https://img.shields.io/github/release/matei-tm/garmin-m8m.svg)](https://github.com/matei-tm/garmin-m8m/releases)  
 
-Branch | Status
-:------: | :------:
-master | [![Build Status](https://travis-ci.org/matei-tm/garmin-m8m.svg?branch=master)](https://travis-ci.org/matei-tm/garmin-m8m)
-development | [![Build Status](https://travis-ci.org/matei-tm/garmin-m8m.svg?branch=develop)](https://travis-ci.org/matei-tm/garmin-m8m)
 
 Garmin smart watch application.
 For each 10 minutes, the owl has its eyes wide open for as long as the percent activity from the step goal. (i.e. if your activity is 20 percent of the step goal, the owl will stay awake the minutes 0, 1 and 2 in each ten minute decade)
@@ -90,6 +86,24 @@ In this case the double column is removed.
 
 ![military](m8m/screenshot/s10.png)
 
+### Wings decoration options
+
+* Static 1
+* Static 2
+* Floors Climbed
+* Heart Rate
+
+The decorative wings
+![settings](m8m/screenshot/wings-deco.png)
+
+If Floors Climbed is selected, each red strip is a ten percent from the goal
+
+![settings](m8m/screenshot/floors-info-0.png)
+
+If HR active wings option is selected, than each red stripe is ten beats range.
+The HR is divided in two zones: confort (0-100) and training (100+)
+![settings](m8m/screenshot/hr-info-0.png)
+
 ## Screen Legend
 
 ![settings](m8m/screenshot/s30.png)
@@ -149,36 +163,36 @@ The application may be downloaded from the Garmin store.
    - [Vivoactive 3 Music](#Vivoactive-3-Music)
    - [Vivoactive 3 Music LTE](#Vivoactive-3-Music-LTE)
    - [Vivolife](#Vivolife)
-   - [Approach® S62](#Approach%C2%AE-S62)
+   - [Approach® S62](#Approach-S62)
    - [Captain Marvel](#Captain-Marvel)
-   - [D2™ Air](#D2%E2%84%A2-Air)
-   - [Darth Vader™](#Darth-Vader%E2%84%A2)
-   - [Descent™ Mk2 / Descent™ Mk2i](#Descent%E2%84%A2-Mk2--Descent%E2%84%A2-Mk2i)
-   - [Descent™ Mk2 S](#Descent%E2%84%A2-Mk2-S)
-   - [Enduro™](#Enduro%E2%84%A2)
-   - [fēnix® 6 / 6 Solar / 6 Dual Power](#f%C4%93nix%C2%AE-6--6-Solar--6-Dual-Power)
-   - [fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6](#f%C4%93nix%C2%AE-6-Pro--6-Sapphire--6-Pro-Solar--6-Pro-Dual-Power--quatix%C2%AE-6)
-   - [fēnix® 6S / 6S Solar / 6S Dual Power](#f%C4%93nix%C2%AE-6S--6S-Solar--6S-Dual-Power)
-   - [fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power](#f%C4%93nix%C2%AE-6S-Pro--6S-Sapphire--6S-Pro-Solar--6S-Pro-Dual-Power)
-   - [fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics - Edition / quatix® 6X / 6X Solar / 6X Dual er](#f%C4%93nix%C2%AE-6X-Pro--6X-Sapphire--6X-Pro-Solar--tactix%C2%AE-Delta-Sapphire--Delta-Solar--Delta-Solar---Ballistics---Edition--quatix%C2%AE-6X--6X-Solar--6X-Dual-er)
+   - [D2™ Air](#D2-Air)
+   - [Darth Vader™](#Darth-Vader)
+   - [Descent™ Mk2 / Descent™ Mk2i](#Descent-Mk2--Descent-Mk2i)
+   - [Descent™ Mk2 S](#Descent-Mk2-S)
+   - [Enduro™](#Enduro)
+   - [fēnix® 6 / 6 Solar / 6 Dual Power](#f%C4%93nix-6--6-Solar--6-Dual-Power)
+   - [fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6](#f%C4%93nix-6-Pro--6-Sapphire--6-Pro-Solar--6-Pro-Dual-Power--quatix-6)
+   - [fēnix® 6S / 6S Solar / 6S Dual Power](#f%C4%93nix-6S--6S-Solar--6S-Dual-Power)
+   - [fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power](#f%C4%93nix-6S-Pro--6S-Sapphire--6S-Pro-Solar--6S-Pro-Dual-Power)
+   - [fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics - Edition / quatix® 6X / 6X Solar / 6X Dual er](#f%C4%93nix-6X-Pro--6X-Sapphire--6X-Pro-Solar--tactix-Delta-Sapphire--Delta-Solar--Delta-Solar---Ballistics---Edition--quatix-6X--6X-Solar--6X-Dual-er)
    - [First Avenger](#First-Avenger)
-   - [Forerunner® 45](#Forerunner%C2%AE-45)
-   - [Forerunner® 55](#Forerunner%C2%AE-55)
-   - [Forerunner® 745](#Forerunner%C2%AE-745)
-   - [Forerunner® 945 LTE](#Forerunner%C2%AE-945-LTE)
-   - [Garmin Swim™ 2](#Garmin-Swim%E2%84%A2-2)
-   - [MARQ™ Adventurer](#MARQ%E2%84%A2-Adventurer)
-   - [MARQ™ Commander](#MARQ%E2%84%A2-Commander)
-   - [MARQ™ Golfer](#MARQ%E2%84%A2-Golfer)
-   - [Rey™](#Rey%E2%84%A2)
-   - [Venu® Sq](#Venu%C2%AE-Sq)
-   - [Venu® Sq. Music Edition](#Venu%C2%AE-Sq-Music-Edition)
-   - [Venu™](#Venu%E2%84%A2)
-   - [Venu™ 2](#Venu%E2%84%A2-2)
-   - [Venu™ 2S](#Venu%E2%84%A2-2S)
-   - [Venu™ Mercedes-Benz® Collection](#Venu%E2%84%A2-Mercedes-Benz%C2%AE-Collection)
-   - [vívoactive® 4](#v%C3%ADvoactive%C2%AE-4)
-   - [vívoactive® 4S](#v%C3%ADvoactive%C2%AE-4S)
+   - [Forerunner® 45](#Forerunner-45)
+   - [Forerunner® 55](#Forerunner-55)
+   - [Forerunner® 745](#Forerunner-745)
+   - [Forerunner® 945 LTE](#Forerunner-945-LTE)
+   - [Garmin Swim™ 2](#Garmin-Swim-2)
+   - [MARQ™ Adventurer](#MARQ-Adventurer)
+   - [MARQ™ Commander](#MARQ-Commander)
+   - [MARQ™ Golfer](#MARQ-Golfer)
+   - [Rey™](#Rey)
+   - [Venu® Sq](#Venu-Sq)
+   - [Venu® Sq. Music Edition](#Venu-Sq-Music-Edition)
+   - [Venu™](#Venu)
+   - [Venu™ 2](#Venu-2)
+   - [Venu™ 2S](#Venu-2S)
+   - [Venu™ Mercedes-Benz® Collection](#Venu-Mercedes-Benz-Collection)
+   - [vívoactive® 4](#v%C3%ADvoactive-4)
+   - [vívoactive® 4S](#v%C3%ADvoactive-4S)
 
 ## Screenshots
 
@@ -382,7 +396,7 @@ The application may be downloaded from the Garmin store.
 ![minute](m8m/screenshot/s79-vivolife.png)
 ![minute](m8m/screenshot/s80-vivolife.png)
 
-### Approach® S62
+### Approach S62
 
 ![minute](m8m/screenshot/s98-approachs62-0.png)
 ![minute](m8m/screenshot/s98-approachs62-1.png)
@@ -392,52 +406,52 @@ The application may be downloaded from the Garmin store.
 ![minute](m8m/screenshot/s92-captainmarvel-0.png)
 ![minute](m8m/screenshot/s92-captainmarvel-1.png)
 
-### D2™ Air
+### D2 Air
 
 ![minute](m8m/screenshot/s91-d2air-0.png)
 ![minute](m8m/screenshot/s91-d2air-1.png)
 
-### Darth Vader™
+### Darth Vader
 
 ![minute](m8m/screenshot/s98-darthvader-0.png)
 ![minute](m8m/screenshot/s98-darthvader-1.png)
 
-### Descent™ Mk2 / Descent™ Mk2i
+### Descent Mk2 / Descent Mk2i
 
 ![minute](m8m/screenshot/s98-descentmk2-0.png)
 ![minute](m8m/screenshot/s98-descentmk2-1.png)
 
-### Descent™ Mk2 S
+### Descent Mk2 S
 
 ![minute](m8m/screenshot/s91-descentmk2s-0.png)
 ![minute](m8m/screenshot/s91-descentmk2s-1.png)
 
-### Enduro™
+### Enduro
 
 ![minute](m8m/screenshot/s98-enduro-0.png)
 ![minute](m8m/screenshot/s98-enduro-1.png)
 
-### fēnix® 6 / 6 Solar / 6 Dual Power
+### fēnix 6 / 6 Solar / 6 Dual Power
 
 ![minute](m8m/screenshot/s98-fenix6-0.png)
 ![minute](m8m/screenshot/s98-fenix6-1.png)
 
-### fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6
+### fēnix 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix 6
 
 ![minute](m8m/screenshot/s98-fenix6pro-0.png)
-![minute](m8m/screenshot/s98- x6pro-1.png)
+![minute](m8m/screenshot/s98-fenix6pro-1.png)
 
-### fēnix® 6S / 6S Solar / 6S Dual Power
+### fēnix 6S / 6S Solar / 6S Dual Power
 
 ![minute](m8m/screenshot/s89-fenix6s-0.png)
 ![minute](m8m/screenshot/s89-fenix6s-1.png)
 
-### fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power
+### fēnix 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power
 
 ![minute](m8m/screenshot/s90-fenix6spro-0.png)
-![minute](m8m/screenshot/s90- x6spro-1.png)
+![minute](m8m/screenshot/s90-fenix6spro-1.png)
 
-### fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics - Edition / quatix® 6X / 6X Solar / 6X Dual er
+### fēnix 6X Pro / 6X Sapphire / 6X Pro Solar / tactix Delta Sapphire / Delta Solar / Delta Solar - Ballistics - Edition / quatix 6X / 6X Solar / 6X Dual er
 
 ![minute](m8m/screenshot/s98-fenix6xpro-0.png)
 ![minute](m8m/screenshot/s98-fenix6xpro-1.png)
@@ -446,86 +460,88 @@ The application may be downloaded from the Garmin store.
 
 ![minute](m8m/screenshot/s98-firstavenger-0.png)
 ![minute](m8m/screenshot/s98-firstavenger-1.png)
-### Forerunner® 45
+
+### Forerunner 45
 
 ![minute](m8m/screenshot/s95-fr45-0.png)
 ![minute](m8m/screenshot/s95-fr45-1.png)
-### Forerunner® 55
+
+### Forerunner 55
 
 ![minute](m8m/screenshot/s96-fr55-0.png)
 ![minute](m8m/screenshot/s96-fr55-1.png)
 
-### Forerunner® 745
+### Forerunner 745
 
 ![minute](m8m/screenshot/s88-fr745-0.png)
 ![minute](m8m/screenshot/s88-fr745-1.png)
 
-### Forerunner® 945 LTE
+### Forerunner 945 LTE
 
 ![minute](m8m/screenshot/s87-forerunner945lte-0.png)
 ![minute](m8m/screenshot/s87-forerunner945lte-1.png)
 
-### Garmin Swim™ 2
+### Garmin Swim 2
 
 ![minute](m8m/screenshot/s97-swim2-0.png)
 ![minute](m8m/screenshot/s97-swim2-1.png)
 
-### MARQ™ Adventurer
+### MARQ Adventurer
 
 ![minute](m8m/screenshot/s85-marqadventurer-0.png)
 ![minute](m8m/screenshot/s85-marqadventurer-1.png)
 
-### MARQ™ Commander
+### MARQ Commander
 
 ![minute](m8m/screenshot/s86-marqcommander-0.png)
 ![minute](m8m/screenshot/s86-marqcommander-1.png)
 
-### MARQ™ Golfer
+### MARQ Golfer
 
 ![minute](m8m/screenshot/s84-marqgolfer-0.png)
 ![minute](m8m/screenshot/s84-marqgolfer-1.png)
 
-### Rey™
+### Rey
 
 ![minute](m8m/screenshot/s93-rey-0.png)
 ![minute](m8m/screenshot/s93-rey-1.png)
 
-### Venu® Sq
+### Venu Sq
 
 ![minute](m8m/screenshot/s82-venu-sq-0.png)
 ![minute](m8m/screenshot/s82-venu-sq-1.png)
 
-### Venu® Sq. Music Edition
+### Venu Sq. Music Edition
 
 ![minute](m8m/screenshot/s83-venu-sqm-0.png)
 ![minute](m8m/screenshot/s83-venu-sqm-1.png)
 
-### Venu™
+### Venu
 
 ![minute](m8m/screenshot/s91-venu-0.png)
 ![minute](m8m/screenshot/s91-venu-1.png)
 
-### Venu™ 2
+### Venu 2
 
 ![minute](m8m/screenshot/s91-venu2-0.png)
 ![minute](m8m/screenshot/s91-venu2-1.png)
 
-### Venu™ 2S
+### Venu 2S
 
 ![minute](m8m/screenshot/s91-venu2s-0.png)
 ![minute](m8m/screenshot/s91-venu2s-1.png)
 
-### Venu™ Mercedes-Benz® Collection
+### Venu Mercedes-Benz Collection
 
 ![minute](m8m/screenshot/s91-venumercedesbenz-0.png)
 ![minute](m8m/screenshot/s91-venumercedesbenz-1.png)
 
-### vívoactive® 4
+### vívoactive 4
 
 ![minute](m8m/screenshot/s98-vivoactive4-0.png)
 ![minute](m8m/screenshot/s98-vivoactive4-1.png)
 
-### vívoactive® 4S
+### vívoactive 4S
 
 ![minute](m8m/screenshot/s94-vivoactive4s-0.png)
 ![minute](m8m/screenshot/s94-vivoactive4s-1.png)
