@@ -22,6 +22,7 @@ For each 10 minutes, the owl has its eyes wide open for as long as the percent a
 ![even minute](m8m/screenshot/s00.png)
 ![odd minute](m8m/screenshot/s01.png)
 ![garmin](m8m/screenshot/s81.png)
+![garmin](m8m/screenshot/hr.png)
 
 ## Features
 
