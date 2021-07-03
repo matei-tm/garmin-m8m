@@ -1,13 +1,49 @@
 ## [Unreleased] -  2019-06-16
 
+## [0.1.1] - 2021-07-03
+
 ### Added
+
+* Extended the compatible Devices: 
+
+- Approach® S62
+- Captain Marvel
+- D2™ Air
+- Darth Vader™
+- Descent™ Mk2 / Descent™ Mk2i
+- Descent™ Mk2 S
+- Enduro™
+- fēnix® 6 / 6 Solar / 6 Dual Power
+- fēnix® 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix® 6
+- fēnix® 6S / 6S Solar / 6S Dual Power
+- fēnix® 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power
+- fēnix® 6X Pro / 6X Sapphire / 6X Pro Solar / tactix® Delta Sapphire / Delta Solar / Delta Solar - Ballistics - Edition / quatix® 6X / 6X Solar / 6X Dual Power
+- First Avenger
+- Forerunner® 45
+- Forerunner® 55
+- Forerunner® 745
+- Forerunner® 945 LTE
+- Garmin Swim™ 2
+- MARQ™ Adventurer
+- MARQ™ Commander
+- MARQ™ Golfer
+- Rey™
+- Venu® Sq
+- Venu® Sq. Music Edition
+- Venu™
+- Venu™ 2
+- Venu™ 2S
+- Venu™ Mercedes-Benz® Collection
+- vívoactive® 4
+- vívoactive® 4S
+
 
 * Extended the compatible devices: D2 Delta, D2 Delta PX, D2 Delta S, Fenix 5 Plus, Fenix 5s Plus, Fenix 5x Plus, Forerunner 245, Forerunner 45 Music, Forerunner 945, MARQ Athlete, MARQ Aviator, MARQ Captain, MARQ Driver, MARQ Expedition, Vivoactive 3 Mercedes Benz, Vivoactive 3 Music, Vivoactive 3 Music LTE, Vivolife
 * Wing decorations options: static 1, static 2, floors climbed goal, heart rate
 
 ### Changed
 
-* SDK updated to 3.0.11
+* SDK updated to 4.0.3
 
 ## [0.0.9] - 2018-02-26
 
