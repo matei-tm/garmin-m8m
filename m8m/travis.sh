@@ -1,7 +1,7 @@
 #!/bin/bash
 # travis.sh script for CI integration
 
-SDK_URL="https://developer.garmin.com/downloads/connect-iq/sdks/connectiq-sdk-lin-3.0.11-2019-4-30-cd45859.zip"
+SDK_URL="https://developer.garmin.com/downloads/connect-iq/sdks/connectiq-sdk-lin-4.0.3-2021-06-01-b7cc78017.zip"
 SDK_FILE="sdk.zip"
 SDK_DIR="sdk"
 
