@@ -6,11 +6,10 @@ script:
     - cd m8m && ./travis.sh
 
 deploy:
-    provider: pages
+    provider: releases
     skip-cleanup: true
-    local_dir: public
-    github-token: $GITHUB_TOKEN
-    keep-history: true
-    target_branch: gh-pages
+    file: public/m8m.iq
+    draft: true
+    overwrite: true
     on:
-        branch: master
+        branch: develop
