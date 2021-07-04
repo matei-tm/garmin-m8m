@@ -5,11 +5,4 @@ jdk: oraclejdk11
 script:
     - cd m8m && ./travis.sh
 
-deploy:
-    provider: releases
-    skip-cleanup: true
-    file: public/m8m.iq
-    draft: true
-    overwrite: true
-    on:
-        branch: develop
+
