@@ -2,8 +2,10 @@
 
 # This is just a little helper-script to make ConnectIQ-development on UNIX-systems easier (without using the Eclipse-plugin).
 #
-# Based on the (Linux) ConnectIQ SDK 2.4.2
-# ( https://developer.garmin.com/downloads/connect-iq/sdks/connectiq-sdk-lin-2.4.2.zip )
+# List of the sdks is grabbed from: https://developer.garmin.com/downloads/connect-iq/sdks/sdks.json
+# Based on the (Linux) ConnectIQ SDK 3.1.x
+# Higher sdk removed the devices.xml file
+# ( https://developer.garmin.com/downloads/connect-iq/sdks/connectiq-sdk-lin-3.1.9-2020-06-24-1cc9d3a70.zip )
 #
 # The following tasks can be invoked:
 #   * compiling (re)sources and building a PRG-file for testing
