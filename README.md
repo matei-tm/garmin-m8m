@@ -4,8 +4,8 @@
 
 Branch | Status
 :------: | :------:
-master | [![Build Status](https://travis-ci.org/matei-tm/garmin-m8m.svg?branch=master)](https://travis-ci.org/matei-tm/garmin-m8m)
-development | [![Build Status](https://travis-ci.org/matei-tm/garmin-m8m.svg?branch=develop)](https://travis-ci.org/matei-tm/garmin-m8m)
+master | [![Build Status](https://travis-ci.com/matei-tm/garmin-m8m.svg?branch=master)](https://travis-ci.com/matei-tm/garmin-m8m)
+development | [![Build Status](https://travis-ci.com/matei-tm/garmin-m8m.svg?branch=develop)](https://travis-ci.com/matei-tm/garmin-m8m)
 
 ## Description: Garmin smart watch application
 
