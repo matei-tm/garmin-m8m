@@ -41,7 +41,12 @@ sed -i '/venusq/d' manifest.xml
 sed -i '/venud/d' manifest.xml
 sed -i '/venusqm/d' manifest.xml
 
-./mb_runner/mb_runner.sh package /home/travis/build/matei-tm/garmin-m8m/m8m/
+
+./mb_runner/mb_runner.sh package .
+
 \cp manifest.xml.bak manifest.xml
 rm manifest.xml.bak
-echo Completed the packages build process
+
+mkdir ../public
+mv m8m.iq ../public/m8m.iq
+echo Completed the package
