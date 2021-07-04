@@ -102,7 +102,7 @@ If Floors Climbed is selected, each red strip is a ten percent from the goal
 ![settings](m8m/screenshot/floors-info-0.png)
 
 If HR active wings option is selected, then each red stripe is ten beats range.
-The HR is divided in two zones: confort (0-100) and training (100+)
+The HR is divided in two zones: comfort (0-100) and training (100+)
 ![settings](m8m/screenshot/hr-info-0.png)
 
 ## Screen Legend
